@@ -95,6 +95,8 @@ Generate the complete single-page LaTeX code inside a single continuous code blo
 \titleformat{\section}{
   \vspace{-5pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+\titlespacing{\section}{0pt}{4pt plus 0pt minus 0pt}{3pt plus 0pt minus 0pt}
+\setlength{\parskip}{0pt}
 
 \pdfgentounicode=1
 
@@ -117,7 +119,7 @@ Generate the complete single-page LaTeX code inside a single continuous code blo
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet, itemsep=1.5pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
