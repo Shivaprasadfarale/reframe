@@ -1,117 +1,116 @@
 # 🟢 The Absolute Beginner's Guide to Reframe (Zero-Tech Required)
 
 > **Don't know what Git, LaTeX, or VS Code is? No problem!**  
-> This guide is for job seekers (Marketing, HR, Finance, Operations, Healthcare, Students) who want a 100% ATS-compliant resume **using just their Mobile Phone or Web Browser (ChatGPT / Claude + Overleaf)** with zero coding or software installations!
+> This guide is for job seekers (Marketing, HR, Finance, Operations, Healthcare, Engineering, Students) who want a 100% ATS-compliant resume **using your favorite AI on your Phone or Laptop** with zero software installations!
 
 ---
 
-## 🧭 Choose How You Want to Use Reframe:
+## 🧭 Choose Your Preferred AI Platform (All 3 are 100% Free):
 
 ```
-┌─────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┐
-│           📱 ☁️ PATH 1: CHATGPT / CLAUDE (EASIEST)          │             🖥️ PATH 2: DOWNLOAD ZIP (LOCAL IDE)        │
-│                (100% Mobile App & Web Browser)              │                                                         │
-├─────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
-│ • Set up once in 2 minutes (100% FREE on ChatGPT & Claude). │ • For users who prefer working on their laptop.         │
-│ • Works inside the official iPhone / Android Mobile Apps.   │ • Download as ZIP directly from GitHub (No Git needed). │
-│ • Works in Chrome, Safari, Edge on any computer or tablet.  │ • 1-Click double-click setup (`setup.bat` / `setup.sh`).│
-│ • Tailor new resumes in 10 seconds from your phone!         │ • Live side-by-side PDF preview in VS Code (`Ctrl+Alt+V`)│
-└─────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────┘
+┌──────────────────────────────┬──────────────────────────────┬──────────────────────────────────────────┐
+│ Preferred AI Platform        │ Best For                     │ Setup Time                               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────────────────┤
+│ 💎 Option 1: Google Gemini   │ ⭐ No Rate Limits (1M Tokens)│ 2-Minute Copy-Paste                      │
+│ 🤖 Option 2: ChatGPT         │ Popular Mobile & Web App     │ 2-Minute Custom GPT                      │
+│ 🧠 Option 3: Claude          │ 1-Click Native Plugin        │ 1-Click from GitHub Directory            │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────────────────┘
 ```
 
 ---
 
-# 📱 ☁️ PATH 1: The "1-Time Setup" (Mobile Apps & Web Browser)
+# 💎 OPTION 1: Google Gemini Gem (Recommended — Zero Rate Limits!)
 
-You can set up your own personal **Resume Tailor** inside **ChatGPT** or **Claude** in 2 minutes:
+Google Gemini has **no character limits** and **no strict daily message caps**.
 
----
+### 1-Time Setup:
+1. Go to **[gemini.google.com](https://gemini.google.com)** (Free with any Google account).
+2. In the left sidebar, click **"Gem manager"** $\rightarrow$ Click **"New Gem"**.
+3. **Name:** `Reframe — Universal ATS Resume Tailor`
+4. **Instructions:** Copy the complete Gemini Master Prompt from **[`CUSTOM_GPT_GUIDE.md`](CUSTOM_GPT_GUIDE.md)** and paste it into the Instructions box.
+5. Click **"Save"**.
 
-### Step 1: Open ChatGPT or Claude
-* **In ChatGPT:** Go to [chatgpt.com](https://chatgpt.com) $\rightarrow$ Click **"Explore GPTs"** in the sidebar $\rightarrow$ Click **"+ Create"** $\rightarrow$ Click **"Configure"**.  
-  *(👉 See the **[Custom GPT Master Setup Guide (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md)** for the exact copy-paste fields!)*
-* **In Claude:** Go to [claude.ai](https://claude.ai) $\rightarrow$ Click **"Projects"** in the sidebar $\rightarrow$ Click **"Create Project"**.
-
----
-
-### Step 2: Paste the Master Instructions & Upload Knowledge
-1. **Instructions:** Copy the pre-tested Master Prompt from **[`CUSTOM_GPT_GUIDE.md`](CUSTOM_GPT_GUIDE.md)** and paste it into the **"Instructions"** box.
-2. **Knowledge Files:** Under the **"Knowledge"** section, upload these 2 files from this repository:
-   * **[`base_template.tex`](base_template.tex)**
-   * **[`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md)**
-3. **Capabilities:** Check **Web Search** and **Code Interpreter** (uncheck DALL-E).
-4. Click **"Save / Create"** (select **"Only Me"**).
+### Daily Use (10 Seconds):
+* Open your **Reframe Gem** $\rightarrow$ Paste any Job Description (JD) $\rightarrow$ Review your Gap Analysis $\rightarrow$ Click *"Copy Code"* $\rightarrow$ Paste into [Overleaf.com](https://www.overleaf.com) $\rightarrow$ Download your PDF!
 
 ---
 
-### Step 3: Daily Tailoring (Takes Literally 10 Seconds!)
+# 🤖 OPTION 2: ChatGPT Custom GPT (The 2-Minute Bot)
 
-Whenever you find a job on LinkedIn, Indeed, or a company site:
+### 1-Time Setup:
+1. Open **[chatgpt.com](https://chatgpt.com)** $\rightarrow$ In the left sidebar, click **"Explore GPTs"** $\rightarrow$ Click **"+ Create"** (top right) $\rightarrow$ Click **"Configure"**.
+2. **Name:** `Reframe — Universal ATS Resume Tailor`
+3. **Instructions:** Copy the Master Prompt from **[`CUSTOM_GPT_GUIDE.md`](CUSTOM_GPT_GUIDE.md)**.
+4. **Knowledge:** Click *"Upload files"* and upload **[`base_template.tex`](base_template.tex)** and **[`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md)** from this repo.
+5. Click **"Save" $\rightarrow$ "Only me"**.
 
-1. Open your saved **"Reframe"** GPT/Project on your phone or laptop.
-2. Send this message:
+### Daily Use (10 Seconds):
+* Open your **Reframe GPT** on your phone or laptop $\rightarrow$ Paste the JD $\rightarrow$ Reply *"Proceed"* $\rightarrow$ Copy LaTeX code $\rightarrow$ Paste into Overleaf!
+
+---
+
+# 🧠 OPTION 3: Claude Plugin (1-Click Marketplace Install)
+
+Claude allows you to install Reframe as an official, native **Plugin with 4 dedicated skills** directly from our GitHub repository!
+
+### 1-Time Setup:
+1. Open **[claude.ai](https://claude.ai)**.
+2. In the left sidebar, click **Directory $\rightarrow$ Plugins**.
+3. Click the **`+` (Add Marketplace)** button $\rightarrow$ Select **"Add from a repository"**.
+4. Paste this exact repository URL:
    ```text
-   Tailor my resume for this job description:
-   [PASTE JOB DESCRIPTION]
+   https://github.com/Shivaprasadfarale/reframe
    ```
-3. The AI will immediately run a pre-resume fit analysis, show your matched skills vs. missing gaps, and upon your confirmation, output the exact single-page LaTeX code!
+5. Click **"Sync / Install"**.
+
+### The 4 Built-in Slash Commands in Claude:
+Once installed, you can type `/` in any Claude chat to access all 4 specialized skills:
+* 📝 **`/initialize-profile`** $\rightarrow$ Paste your raw resume text; Claude structures your data and asks clarifying questions (GitHub, Portfolio, Location).
+* 🔍 **`/gap-analysis`** $\rightarrow$ Paste a Job Description to get your ATS Match %, Matched Skills, and Critical Gaps.
+* 📄 **`/tailor-resume`** $\rightarrow$ Generates the complete, compilable 1-page ATS LaTeX code in 1 single shot!
+* 🖨️ **`/overleaf-export`** $\rightarrow$ Step-by-step PDF compilation and layout debugger.
 
 ---
 
-### Step 4: Generate & Download Your PDF (Free in Overleaf)
+# 🖨️ How to Download Your PDF in 10 Seconds (Overleaf)
+
+Regardless of which AI option you used above:
 
 1. Open **[Overleaf.com](https://www.overleaf.com)** in your browser (Safari, Chrome, Edge).
 2. Click **"New Project" $\rightarrow$ "Blank Project"**.
-3. Paste the code generated by ChatGPT/Claude.
+3. Paste the code generated by your AI.
 4. Click the green **"Recompile"** button.
 5. Tap **"Download PDF"**!
 
-🎉 **You have a millimeter-perfect, 100% ATS-compliant PDF resume ready to apply!**
+🎉 **You now have a millimeter-perfect, 100% ATS-compliant PDF resume ready to apply!**
 
 ---
 
-# 🖥️ PATH 2: The "Download ZIP" Method (Using VS Code Without Git)
+# 🔄 How to Update Your Profile Later (Adding New Projects/Jobs)
 
-If you want to use the automated workspace on your computer without touching terminal commands:
+Whenever you build a new project, complete a new job, or earn a certificate in the future, simply open your AI chat and say:
 
-### Step 1: Download the Project
-1. Go to the GitHub repository: **[https://github.com/Shivaprasadfarale/reframe](https://github.com/Shivaprasadfarale/reframe)**
-2. Click the green **"<> Code"** button near the top right $\rightarrow$ Click **"Download ZIP"**.
-3. Extract the downloaded ZIP folder on your computer.
+```text
+Add this new project to my master profile:
+- Project Name: [Name]
+- Technologies: [Stack used]
+- What I did: [Brief description of what you accomplished]
+```
 
----
-
-### Step 2: 1-Click Setup
-* **Windows:** Open the unzipped folder and double-click **`setup.bat`**.
-* **Mac / Linux:** Open the unzipped folder and run **`setup.sh`**.
-
-*(The script will automatically detect and install the compiler for you in the background!)*
-
----
-
-### Step 3: Open in VS Code & Live PDF Preview
-1. Open **[VS Code](https://code.visualstudio.com/)** $\rightarrow$ File $\rightarrow$ Open Folder $\rightarrow$ Select your unzipped `reframe` folder.
-2. Install the **LaTeX Workshop** extension (by James-Yu).
-3. Open `main.tex` and press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`).
-4. Your live PDF resume opens in a side-by-side tab and is saved in `pdf_output/`!
+The AI will automatically format it with Google XYZ metrics and save it to your active profile memory for all future job applications!
 
 ---
 
 ## ❓ Non-Tech FAQ
 
 <details>
-<summary><b>Q: What does "ATS" mean?</b></summary>
-<b>ATS (Applicant Tracking System)</b> is the automated software (like Workday, Taleo, or Greenhouse) that companies use to screen resumes before a human recruiter reads them. Reframe generates clean, single-column LaTeX code that reads with 100% accuracy on every ATS.
-</details>
-
-<details>
-<summary><b>Q: Do I have to pay for ChatGPT, Claude, or Overleaf?</b></summary>
-<b>No!</b> Projects and file uploads are available to <b>100% free users</b> on both ChatGPT and Claude, and Overleaf is completely free.
+<summary><b>Q: Do I have to pay for any of these AIs or Overleaf?</b></summary>
+<b>No!</b> Google Gemini Gems, ChatGPT Custom GPTs, Claude Plugins, and Overleaf are all completely free to use.
 </details>
 
 <details>
 <summary><b>Q: Can I edit a word directly if I spot a typo?</b></summary>
-<b>Yes!</b> You can edit the text directly inside Overleaf or VS Code just like Microsoft Word, then click Recompile to update your PDF.
+<b>Yes!</b> You can edit the text directly inside Overleaf just like Microsoft Word, then click Recompile to update your PDF.
 </details>
 
 ---
