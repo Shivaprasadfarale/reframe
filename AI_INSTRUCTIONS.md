@@ -8,36 +8,58 @@
 ## 📂 Project Architecture
 
 ```
-ats-resume-tailor/
+reframe/
 │
-├── master_profile.json           # [PRIVATE] Single source of truth (profile, projects, experience bank)
-├── master_profile.template.json  # Starter template for new users
-├── base_template.tex             # Structural 1-page ATS LaTeX layout (Times font, tight geometry)
-├── AI_INSTRUCTIONS.md            # Universal system instructions for any AI model
-├── README.md                     # Documentation & usage guide
-├── WORKFLOW_GUIDE.md             # Complete user journey & stage-by-stage guide
-├── main.tex                      # Active workspace LaTeX resume (overwritten on each new JD)
-├── main.pdf                      # Active compiled PDF resume
+├── setup.bat / setup.sh / setup.py # ⚡ 1-Click Automated Setup & Dependency Installer
+├── master_profile.json             # [PRIVATE] Single source of truth (profile, projects, experience bank)
+├── master_profile.template.json    # Starter template for new users
+├── base_template.tex               # Structural 1-page ATS LaTeX layout (Times font, tight geometry)
+├── AI_INSTRUCTIONS.md              # Universal system instructions for any AI model
+├── README.md                       # Documentation & quick start guide
+├── WORKFLOW_GUIDE.md               # Complete user journey & stage-by-stage guide
+├── RESUME_RESEARCH_REPORT.md       # Deep-dive 10-chapter research compendium
+├── main.tex                        # Active workspace LaTeX resume (overwritten on each new JD)
 │
-├── tex_source/                   # 📁 Saved role-specific .tex files (for Overleaf users)
-└── pdf_output/                   # 📁 Saved role-specific .pdf files (for local PDF downloads)
+├── 📁 tex_source/                  # 📝 Saved role-specific .tex files (for Overleaf users)
+│   └── <company_role>.tex
+│
+└── 📁 pdf_output/                  # 🖨️ Saved role-specific .pdf files (for direct downloads)
+    └── <company_role>.pdf
 ```
 
 ---
 
-## 🚀 ONBOARDING: Profile Initialization (For New Users)
+## 🚀 ONBOARDING: Profile Initialization & Interactive Clarification Protocol
 
-If a user clones this repo and does not have `master_profile.json`, or asks:  
-*"Here is my resume: [paste text/PDF] -> initialize my profile"*
+When a new user pastes their existing resume or says:  
+*"Here is my resume: [pasted text] -> initialize my profile"*
 
-1. Read their pasted resume or text.
-2. Structure all their personal details, education, past jobs, projects, and skills into **`master_profile.json`** using the schema from `master_profile.template.json`.
-3. Support optional fields (`github`, `portfolio`) and multiple role-framing presets per job/project.
-4. Confirm that their master profile is ready, and invite them to paste their first Job Description!
+You **MUST NOT** just silently guess or leave blank fields without asking. Follow this 3-step protocol:
+
+```
+[ User Pastes Resume ] ──> [ Step A: Parse Data & Detect Missing Links ] ──> [ Step B: Ask Clarifying Questions ] ──> [ Step C: Save master_profile.json ]
+```
+
+### 🔍 Step A: Parse Data & Audit Completeness
+Extract all raw details (Education, Jobs, Projects, Skills) into the schema defined in `master_profile.template.json`.
+
+### ❓ Step B: Proactive Clarification Interview (Crucial)
+If high-value links or details are missing from their pasted text, **explicitly ask them a quick clarification question before finalizing the file**:
+> *"I've parsed your resume! Before saving `master_profile.json`, I noticed a few optional items were missing:*  
+> *1. **GitHub Profile:** (e.g. `https://github.com/yourname` — highly recommended for tech/software roles)*  
+> *2. **Portfolio / Personal Website:** (Optional for design/projects)*  
+> *3. **Location / Preferred Cities:** (e.g. `San Francisco, CA / Remote`)*  
+> *4. **Class 12th / High School Percentage:** (Recommended for Indian/Early-career resumes)*  
+> *Would you like to provide any of these now, or shall I save your profile without them?"*
+
+### 💾 Step C: Save `master_profile.json`
+* If the user provides the links $\rightarrow$ insert them into `master_profile.json`.
+* If the user says *"skip"* or doesn't have them $\rightarrow$ set them to empty string `""` (our dynamic LaTeX header adapter will cleanly omit them without orphan `|` delimiters).
+* Create multiple role-framing presets per job/project entry.
 
 ---
 
-## 🛡️ THE MANDATORY 2-STEP TAILORING PROTOCOL
+## 🛡️ THE MANDATORY 2-STEP TAILORING PROTOCOL (ON EVERY NEW JD)
 
 When the user provides a Job Description (JD), you **MUST NOT** blindly generate the resume without performing Step 1.
 

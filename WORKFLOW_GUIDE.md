@@ -9,7 +9,7 @@ This guide documents the exact step-by-step experience for **any candidate from 
 ```mermaid
 flowchart TD
     A["👤 Any User Clones Repo & Opens VS Code\n(Tech, Non-Tech, Fresher, Senior)"] --> B["⚡ Stage 1: Auto-Configuration\n(Run setup.bat / setup.sh -> Auto-Hide junk, PDF Auto-Routing)"]
-    B --> C["📝 Stage 2: 30-Second AI Onboarding\n(User pastes plain text resume -> AI creates master_profile.json)"]
+    B --> C["📝 Stage 2: 30-Second Interactive AI Onboarding\n(User pastes plain text resume -> AI asks clarifying questions -> saves master_profile.json)"]
     C --> D["🎯 Stage 3: User Pastes ANY Job Description (JD)"]
     D --> E["🛡️ Step 3A: Automated Pre-Resume Gap Analysis\n(Fit Score, Feasibility Check, Matched vs. Missing Skills, Suggestions)"]
     E --> F["✅ User Confirms Tailoring Direction"]
@@ -71,7 +71,7 @@ The user runs the 1-click installer:
 
 ---
 
-### STAGE 2: 30-Second Profile Onboarding (AI-Automated)
+### STAGE 2: 30-Second Profile Onboarding (With Interactive AI Interview)
 
 The user only ever has to configure **one file**: their `master_profile.json`.
 
@@ -88,11 +88,12 @@ The user only ever has to configure **one file**: their `master_profile.json`.
 > While modern AI models can accept uploaded PDF files or screenshots of resumes, **copy-pasting plain text directly from your resume is 100% recommended**.  
 > * **Why?** PDF text extractors and image OCR frequently scramble multi-column layouts, misread dates, or merge unrelated bullet points. Plain text provides the AI with clean, unambiguous data, guaranteeing 100% accurate profile initialization.
 
-2. **What the AI does automatically:**
-   * Extracts their real name, contact details, education, past jobs, projects, and skills.
-   * Dynamically formats optional links (adds GitHub/Portfolio if they have one; omits them cleanly if they don't).
-   * Creates multiple role-framing presets per experience entry.
-   * Saves their single source of truth into **`master_profile.json`**.
+2. **The AI's Interactive Clarification Step (What Happens Automatically):**
+   * The AI parses your details.
+   * If any high-value optional fields are missing (e.g. GitHub link for a developer, Portfolio, Location, or Academic percentages), the AI will **ask you a quick clarification question**:
+     > *"I noticed your resume didn't include a GitHub profile link, Portfolio URL, or Class 12th percentage. Would you like to provide any of these now before I finalize your `master_profile.json`?"*
+   * If you provide them, it adds them. If you say *"skip"*, it cleanly leaves them empty (which our template handles dynamically without orphan `|` delimiters).
+   * It formats multiple role-framing presets per job/project and saves your **`master_profile.json`**.
    * **This is a one-time setup.**
 
 ---
