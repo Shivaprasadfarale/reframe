@@ -151,17 +151,22 @@ Tailor my resume for this job description:
 
 ---
 
-## 🧠 Recommended AI Models & Output Quality Tiers
+## 🧠 AI Model Intelligence & Output Quality
 
-While Reframe works with any LLM, **the natural human fluency, strategic role reframing, and ATS pass-rate depend directly on the intelligence of the model you use**:
+The quality of your resume — **its natural human phrasing, defensible metrics, and ATS pass rate** — scales directly with the reasoning capability of the AI model you choose.
 
-| Model Tier | Recommended AI Models | Output Quality & ATS Score | Best For |
-| :--- | :--- | :--- | :--- |
-| **Tier 1: Elite (Recommended ⭐)** | **Claude 3.5 Sonnet / Opus**, **Google Gemini 1.5 Pro**, **GPT-4o / o1** | **95%–98% ATS Pass Rate**<br>• Writes completely natural, human-grade sentences without robotic buzzwords.<br>• Defensible scope metrics and flawless career polymorphism. | High-stakes applications (Top-Tier Tech, Banking, Consulting, Global Enterprises) |
-| **Tier 2: Fast / Standard** | **Claude 3.5 Haiku**, **Google Gemini 1.5 Flash**, **GPT-4o mini** | **85%–90% ATS Pass Rate**<br>• Fast & accurate, but may require minor review of bullet point variety. | Rapid applications, high-volume job pipelines |
-| **Tier 3: Small / Budget Models ⚠️** | **Legacy 7B/8B Local Models**, **GPT-3.5** | **< 75% ATS Pass Rate**<br>• Prone to robotic phrasing, repetitive *"as measured by"* wording, and hallucinated stats. | Not recommended for final job submissions |
+### 🏆 Ranked Model Hierarchy for Resume Tailoring:
 
-> 💡 **Developer Tip:** When using Reframe inside VS Code / Cursor / Antigravity, select **Claude 3.5 Sonnet** (with Extended Thinking enabled) or **Gemini 1.5 Pro** as your active AI agent model for the most articulate, human-sounding results!
+1. 🥇 **Frontier Claude Models (Claude Sonnet / Opus with Thinking Enabled — Recommended ⭐):**
+   * **Why it's #1:** Produces the most articulate, executive-level human writing. Flawlessly reframes non-obvious career skills and eliminates robotic AI buzzwords.
+2. 🥈 **Frontier Google Gemini Models (Gemini Pro / Ultra Series):**
+   * **Why it's #2:** Massive context window, aggressive ATS keyword matching, and strong, defensible quantitative scope metrics.
+3. 🥉 **Frontier OpenAI Models (GPT-4 / o-Series):**
+   * **Why it's #3:** Strong baseline reasoning, but requires strict prompt adherence to avoid mechanical formula repetition.
+4. ⚠️ **Small / Budget Models (7B/8B Local Models or Mini/Legacy Tiers):**
+   * **Caution:** Smaller models often repeat rigid phrasing (e.g. literally writing *"as measured by"*), hallucinate unverified percentage stats, and produce resumes that feel visibly "AI-generated" to recruiters.
+
+> 💡 **Core Rule:** *The stronger the AI model you feed Reframe's instructions to, the more authentic, authoritative, and human your final resume will sound.*
 
 ---
 
