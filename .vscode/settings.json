@@ -1,0 +1,38 @@
+{
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/pdf_output",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex",
+      "tools": [
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=%WORKSPACE_FOLDER%/pdf_output",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "pdflatex",
+  "latex-workshop.latex.clean.enabled": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.synctex.gz": true,
+    "**/*.synctex(busy)": true,
+    "**/*.toc": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true
+  }
+}

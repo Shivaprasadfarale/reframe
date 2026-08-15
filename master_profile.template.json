@@ -1,0 +1,100 @@
+{
+  "personal_info": {
+    "name": "Jane Doe",
+    "location": "San Francisco, CA / Remote",
+    "phone": "+1-555-019-2834",
+    "email": "janedoe@example.com",
+    "linkedin": "https://www.linkedin.com/in/janedoe",
+    "github": "https://github.com/janedoe",
+    "portfolio": ""
+  },
+  "career_level": "fresher",
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "degree": "B.S. in Computer Science",
+      "duration": "2022 -- 2026"
+    },
+    {
+      "institution": "Lincoln High School",
+      "location": "San Francisco, CA",
+      "degree": "High School Diploma -- GPA: 3.95/4.0",
+      "duration": "2018 -- 2022"
+    }
+  ],
+  "experience_bank": [
+    {
+      "id": "swe_intern",
+      "company": "TechCorp Solutions",
+      "role": "Software Engineering Intern",
+      "location": "Remote",
+      "duration": "May 2025 -- Aug 2025",
+      "raw_responsibilities": "Web application development, REST APIs, database queries, defect triage, automated test suites, CI/CD pipelines",
+      "framing_presets": {
+        "fullstack_swe": [
+          "Contributed to core development of a cloud-based web application, building scalable user-facing features and modular REST APIs handling 10,000+ daily payload requests.",
+          "Collaborated with senior engineers to diagnose and resolve 25+ software defect tickets, ensuring 95%+ test coverage and pre-release stability.",
+          "Engineered automated notification pipelines and state-tracking modules, optimizing query latency by 35% based on telemetry analysis."
+        ],
+        "qa_analyst": [
+          "Authored functional test specifications and executed automated validation suites, logging, tracking, and verifying resolution for 20+ defects across 3 sprint cycles.",
+          "Collaborated with cross-functional product teams to capture 30+ functional business requirements and validate implementations against acceptance criteria."
+        ]
+      }
+    },
+    {
+      "id": "campus_lead",
+      "company": "Tech Community Org",
+      "role": "Campus Lead & Ambassador",
+      "location": "Remote",
+      "duration": "Aug 2023 -- May 2024",
+      "raw_responsibilities": "Student outreach, organizing technical bootcamps, stakeholder communication, performance metric tracking",
+      "framing_presets": {
+        "leadership_operations": [
+          "Spearheaded regional outreach and technical career development programs, expanding student participation by 30% across 300+ attendees.",
+          "Organized and hosted 8+ technical workshops, communicating weekly milestone progress and engagement KPIs to regional leadership."
+        ]
+      }
+    }
+  ],
+  "projects_bank": [
+    {
+      "id": "risk_analytics_platform",
+      "name": "Transaction Risk Analytics & Monitoring Platform",
+      "tech_stack": "Python, SQL, scikit-learn, Excel, Power BI",
+      "date": "Aug 2025",
+      "framing_presets": {
+        "data_analytics": [
+          "Engineered an end-to-end transaction monitoring pipeline querying 8,000+ synthetic records (SQL) across rule-based risk scenarios to generate evidence-backed case dispositions.",
+          "Developed a dual-layer detection framework pairing SQL rules with an Isolation Forest anomaly detection model to identify unusual transaction patterns.",
+          "Implemented fuzzy entity matching across 100+ synthetic watchlist records to classify cases into escalate-for-review vs. false-positive outcomes."
+        ]
+      }
+    },
+    {
+      "id": "compliance_tracker",
+      "name": "Enterprise Requirements & Compliance Command Center",
+      "tech_stack": "React, TypeScript, Node.js, PostgreSQL",
+      "date": "Jan 2025",
+      "framing_presets": {
+        "fullstack_web": [
+          "Architected a centralized requirements-traceability module linking 50+ business requirements directly to test cases and defect logs across a 4-stage governance workflow.",
+          "Implemented structured validation workflows with timestamped change histories, providing 100% audit trail visibility from definition through resolution.",
+          "Developed automated escalation views that proactively surface overdue milestones and blocked workstreams to accelerate review cycles across 4 squads."
+        ]
+      }
+    }
+  ],
+  "skills_bank": {
+    "languages": "Python, SQL, JavaScript, TypeScript, HTML5, CSS3, C++",
+    "frameworks_libraries": "React, Node.js, pandas, scikit-learn, Express, Bootstrap",
+    "tools_platforms": "Git, GitHub, PostgreSQL, Power BI, MS Excel (Power Query, VLOOKUP, Pivot Tables), VS Code, Postman",
+    "core_competencies": "Data Analysis & Querying, Requirements Traceability (RTM), Functional Testing, RESTful APIs, Agile/Scrum Collaboration"
+  },
+  "achievements": [
+    "Winner -- University Hackathon (2025): Awarded 1st place among 40+ teams for building an AI-powered assistive productivity tool.",
+    "Senior Member -- IEEE Computer Society Student Branch.",
+    "Organizer -- Campus Tech Bootcamp: Facilitated a multi-day technical training workshop for 150+ student participants."
+  ]
+}

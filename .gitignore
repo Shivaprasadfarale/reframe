@@ -1,0 +1,24 @@
+# Ignore personal data files containing real contact details and phone numbers
+master_profile.json
+main.tex
+tex_source/
+pdf_output/
+
+# LaTeX build artifacts & PDFs
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.synctex(busy)
+*.fls
+*.fdb_latexmk
+*.pdf
+
+# OS & Editor temp files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
