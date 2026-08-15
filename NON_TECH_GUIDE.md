@@ -98,6 +98,16 @@ Proceed with tailoring!
 
 ---
 
+## 🚨 Important: The "Free ATS Checker" Website Trap
+
+If you test your PDF on commercial "Free ATS Checker" websites (Jobscan, ResumeWorded, etc.), you might see artificially low scores (50%–70%). **Do NOT panic!**
+
+* 💰 **Why they do this:** Those websites sell **$30–$50/month rewrite subscriptions**. They intentionally lower your score by counting boilerplate text in the job post (like company perks, *"401k"*, and *"equal opportunity"* disclaimers) to panic you into buying their paid plan!
+* 🏢 **How real companies hire:** Real enterprise ATS systems (Workday, Greenhouse, Taleo) do **NOT** count boilerplate perks. They extract clean text and look for your core skills (*SQL, Python, Jira, FRDs, etc.*).
+* 🛡️ **Reframe is 100% engineered for real corporate ATS parsers and human interviewers!**
+
+---
+
 # 💎 OPTION 2: Google Gemini (1-Click Shared Gem Link)
 
 No plugins or setup required! You can open our pre-configured Gemini Gem with 1 click:
@@ -141,12 +151,6 @@ Because Claude is actively running deep semantic reasoning on every keyword in t
 <details>
 <summary><b>Q: Can I edit a word directly if I spot a typo?</b></summary>
 <b>Yes!</b> You can edit the text directly inside Overleaf just like Microsoft Word, then click Recompile to update your PDF.
-</details>
-
-<details>
-<summary><b>Q: Why do online "Free ATS Checker" websites give 50%–70% scores on my PDF?</b></summary>
-<b>Because commercial ATS checker websites are businesses that sell $30–$50/month resume subscriptions!</b><br>
-They intentionally lower your score by counting boilerplate words (like company perks, <i>"equal opportunity"</i>, and legal disclaimers). <b>Real company ATS systems (Workday, Greenhouse, Taleo)</b> do NOT do that—they extract clean text and look for your core skills (SQL, Python, Jira, FRDs, etc.). Reframe resumes are engineered for real corporate ATS scanners and human interviewers!
 </details>
 
 ---

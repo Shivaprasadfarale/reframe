@@ -174,6 +174,21 @@ All prompts, skills, and templates in Reframe are pre-engineered to mathematical
 
 ---
 
+## 🚨 The "Free ATS Checker" Trap: Why Online Checkers Give Misleading 50%–70% Scores
+
+If you upload your generated resume to commercial "Free ATS Checker" websites (Jobscan, ResumeWorded, Teal, etc.), you might see artificially low scores (50%–70%). **Here is why you should NOT panic:**
+
+1. 💰 **The Freemium Subscription Trap:**  
+   Commercial checker websites are for-profit businesses that make money by selling **$30–$50/month resume rewrite subscriptions**. If their free tool gave your resume a 95% score, you would never buy their service! Their algorithms are intentionally tuned to panic you into purchasing.
+2. 🤖 **Dumb Literal Word-Counting:**  
+   Online checkers compare your resume against the *entire* raw text of a job post—including legal disclaimers, company benefits (*"cab facility"*, *"401k"*, *"equal opportunity"*), and HR boilerplate. If you don't copy-paste their perks paragraph, they deduct 30 points!
+3. 🏢 **How Real Corporate ATS Systems Work (Workday, Greenhouse, Taleo, Lever):**  
+   Real enterprise systems used by companies like Google, Amex, and Amazon do **NOT** use dumb word-counters. They use **Named Entity Recognition (NER) and Semantic Vector Embeddings** to extract clean skills (*SQL, Python, Jira, FRDs, etc.*).
+4. 🎯 **Reframe is Engineered for the Real World:**  
+   Reframe produces 100% clean single-column UTF-8 text streams that real corporate ATS parsers index flawlessly, while keeping your wording natural and defensible when you sit across from a human interviewer!
+
+---
+
 ## ⚠️ 4 Common Mistakes to Avoid
 
 1. ❌ **Uploading Images/Scans:** Always copy-paste **plain text** from your resume and job description to prevent OCR text scrambling.
@@ -213,13 +228,6 @@ Have a question, encountered an issue, or want to suggest a new resume template 
 <details>
 <summary><b>4. How do I update my profile when I get a new job or build a new project?</b></summary>
 Simply open your AI chat and say: <i>"I just built a new project called [Name] using [Stack] that does [Description]. Add it to my master_profile.json!"</i> The AI will automatically format it with multiple framing presets.
-</details>
-
-<details>
-<summary><b>5. Why do online "Free ATS Checker" websites give 50%–70% scores on generated PDFs?</b></summary>
-<b>Because commercial ATS checker websites are for-profit subscription businesses selling $30–$50/month rewrite services.</b><br>
-Their algorithms are intentionally tuned to artificially penalize resumes by counting every single word in the job post (including boilerplate disclaimers like <i>"equal opportunity"</i>, <i>"benefits"</i>, and <i>"hybrid"</i>). If you don't literally copy-paste the benefits paragraph, they deduct 30 points!<br><br>
-<b>Real enterprise ATS systems (Workday, Greenhouse, Taleo, Lever, iCIMS)</b> use semantic entity matching (NER & vector embeddings). Reframe is engineered specifically for real enterprise ATS scanners and human hiring managers—extracting 100% clean UTF-8 text without robotic word-stuffing!
 </details>
 
 ---
