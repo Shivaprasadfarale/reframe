@@ -1,6 +1,7 @@
 # 🎯 Reframe — Universal ATS Resume Tailoring Engine
 
 <p align="center">
+  <a href="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml"><img src="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml/badge.svg" alt="CI Build Status" /></a>
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/ATS%20Pass%20Rate-90%25%2B-success.svg" alt="ATS Pass Rate" />
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="Platform" />
