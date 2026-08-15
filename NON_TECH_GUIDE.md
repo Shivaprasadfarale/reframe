@@ -9,7 +9,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┐
-│           📱 ☁️ PATH 1: CHATGPT / CLAUDE PROJECTS           │             🖥️ PATH 2: DOWNLOAD ZIP (LOCAL IDE)        │
+│           📱 ☁️ PATH 1: CHATGPT / CLAUDE (EASIEST)          │             🖥️ PATH 2: DOWNLOAD ZIP (LOCAL IDE)        │
 │                (100% Mobile App & Web Browser)              │                                                         │
 ├─────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
 │ • Set up once in 2 minutes (100% FREE on ChatGPT & Claude). │ • For users who prefer working on their laptop.         │
@@ -21,38 +21,26 @@
 
 ---
 
-# 📱 ☁️ PATH 1: The "1-Time Project Setup" (Mobile Apps & Web Browser)
+# 📱 ☁️ PATH 1: The "1-Time Setup" (Mobile Apps & Web Browser)
 
-Both **ChatGPT** and **Claude** offer a **"Projects"** feature for **100% FREE users** on both **Mobile Apps (iOS & Android)** and **Desktop Web Browsers**.
-
-Once you set it up, you **NEVER have to upload your old resume again**!
+You can set up your own personal **Resume Tailor** inside **ChatGPT** or **Claude** in 2 minutes:
 
 ---
 
-### Step 1: Download the 2 Key Files from GitHub
-1. Open this repository on your phone or laptop: **[https://github.com/Shivaprasadfarale/reframe](https://github.com/Shivaprasadfarale/reframe)**
-2. Click on **`AI_INSTRUCTIONS.md`** $\rightarrow$ Copy the text.
-3. Click on **`base_template.tex`** $\rightarrow$ Download or copy the text.
+### Step 1: Open ChatGPT or Claude
+* **In ChatGPT:** Go to [chatgpt.com](https://chatgpt.com) $\rightarrow$ Click **"Explore GPTs"** in the sidebar $\rightarrow$ Click **"+ Create"** $\rightarrow$ Click **"Configure"**.  
+  *(👉 See the **[Custom GPT Master Setup Guide (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md)** for the exact copy-paste fields!)*
+* **In Claude:** Go to [claude.ai](https://claude.ai) $\rightarrow$ Click **"Projects"** in the sidebar $\rightarrow$ Click **"Create Project"**.
 
 ---
 
-### Step 2: Create Your 1-Time Project (Pick ChatGPT or Claude)
-
-#### 🤖 Option A: In ChatGPT (Mobile App or Web Browser)
-1. Open the **ChatGPT app** on your phone (or go to [chatgpt.com](https://chatgpt.com)).
-2. In the left sidebar, tap **"+ New Project"** (or create a Project).
-3. Name it: **`Reframe - Resume Tailor`**.
-4. In **Project Instructions**, paste the text from `AI_INSTRUCTIONS.md`.
-5. In **Project Files / Knowledge**, upload `base_template.tex` and your initial resume text.
-6. Done!
-
-#### 🧠 Option B: In Claude (Mobile App or Web Browser)
-1. Open the **Claude app** on your phone (or go to [claude.ai](https://claude.ai)).
-2. In the left sidebar, tap **"Projects" $\rightarrow$ "Create Project"**.
-3. Name it: **`Reframe - Resume Tailor`**.
-4. In **Project Instructions**, paste the text from `AI_INSTRUCTIONS.md`.
-5. In **Project Knowledge**, upload `base_template.tex` and your initial resume text.
-6. Done!
+### Step 2: Paste the Master Instructions & Upload Knowledge
+1. **Instructions:** Copy the pre-tested Master Prompt from **[`CUSTOM_GPT_GUIDE.md`](CUSTOM_GPT_GUIDE.md)** and paste it into the **"Instructions"** box.
+2. **Knowledge Files:** Under the **"Knowledge"** section, upload these 2 files from this repository:
+   * **[`base_template.tex`](base_template.tex)**
+   * **[`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md)**
+3. **Capabilities:** Check **Web Search** and **Code Interpreter** (uncheck DALL-E).
+4. Click **"Save / Create"** (select **"Only Me"**).
 
 ---
 
@@ -60,13 +48,13 @@ Once you set it up, you **NEVER have to upload your old resume again**!
 
 Whenever you find a job on LinkedIn, Indeed, or a company site:
 
-1. Open your saved **"Reframe - Resume Tailor"** Project on your phone or laptop.
+1. Open your saved **"Reframe"** GPT/Project on your phone or laptop.
 2. Send this message:
    ```text
    Tailor my resume for this job description:
    [PASTE JOB DESCRIPTION]
    ```
-3. The AI will immediately run a pre-resume fit analysis and output the exact single-page LaTeX code!
+3. The AI will immediately run a pre-resume fit analysis, show your matched skills vs. missing gaps, and upon your confirmation, output the exact single-page LaTeX code!
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "reframe-marketplace",
+  "version": "1.0.0",
+  "description": "Universal ATS Resume Tailoring Marketplace for Claude",
+  "owner": {
+    "name": "Shivaprasad Farale",
+    "url": "https://github.com/Shivaprasadfarale/reframe"
+  },
+  "plugins": [
+    {
+      "name": "reframe",
+      "version": "1.0.0",
+      "description": "Universal ATS Resume Tailor engine that reframes candidate experience into 1-page LaTeX & PDF.",
+      "source": "./",
+      "category": "Productivity",
+      "author": {
+        "name": "Shivaprasad Farale"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "reframe",
+  "version": "1.0.0",
+  "description": "Universal ATS Resume Tailoring Engine that reframes candidate background to match any Job Description into 1-page LaTeX & PDF.",
+  "author": {
+    "name": "Shivaprasad Farale"
+  },
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "latex",
+    "ats",
+    "career",
+    "job-search",
+    "recruitment"
+  ]
+}

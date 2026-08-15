@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/ATS%20Pass%20Rate-90%25%2B-success.svg" alt="ATS Pass Rate" />
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Mobile-lightgrey.svg" alt="Platform" />
-  <img src="https://img.shields.io/badge/LaTeX-Overleaf%20%7C%20Local%20IDE-orange.svg" alt="LaTeX" />
+  <img src="https://img.shields.io/badge/ChatGPT-Custom%20GPT%20Ready-74aa9c.svg" alt="ChatGPT Ready" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome" />
 </p>
 
@@ -22,7 +22,10 @@
 
 > 🍏 **For Non-Technical Users (Mobile App & Web Browser):**  
 > You do **not** need Git, terminal commands, or VS Code! You can use Reframe 100% inside your **Mobile App (ChatGPT / Claude on iOS & Android)** or **Web Browser** paired with **Overleaf** for zero-software PDF downloads.  
-> 👉 Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)** for a 1-time setup walkthrough!
+> 👉 Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)**!
+>
+> 🤖 **Want to create your own ChatGPT Custom GPT or Claude Project?**  
+> Read the **[Custom GPT Master Setup Guide (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md)** for pre-tested, 0-error system instructions and conversation starters!
 >
 > 💻 **For Technical Users & Developers (IDE & Local CLI):**  
 > Clone this repository, run the 1-click installer (`setup.bat` / `setup.sh`), work inside your IDE (**VS Code, Cursor, Antigravity**), and enjoy live side-by-side PDF preview (`Ctrl + Alt + V`) with full code customization!  
@@ -72,6 +75,7 @@ reframe/
 ├── 🟡 AUTOMATION & ONBOARDING:
 │   ├── setup.bat / setup.sh        <-- 1-Click environment setup script for your OS
 │   ├── master_profile.template.json<-- Starter schema template (Jane Doe)
+│   ├── CUSTOM_GPT_GUIDE.md         <-- Master configuration for ChatGPT & Claude
 │   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (Mobile & Browser)
 │   ├── WORKFLOW_GUIDE.md           <-- Comprehensive step-by-step developer journey
 │   └── RESUME_RESEARCH_REPORT.md   <-- 10-chapter ATS & recruiter eye-tracking compendium
@@ -194,6 +198,7 @@ Simply open your AI chat and say: <i>"I just built a new project called [Name] u
 
 ## 📚 Deep Documentation & Research
 
+* 🤖 **[Custom GPT Master Setup (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md):** 0-error system prompt and configuration guide for ChatGPT & Claude.
 * 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** 100% browser & mobile-based guide using free ChatGPT/Claude Projects + Overleaf.
 * 🧭 **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Step-by-step developer onboarding guide detailing the 4 stages for all candidate personas.
 * 🔬 **[Master Research Compendium (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md):** 10-chapter deep research report on ATS parsing mechanics (Workday, Greenhouse, Lever), recruiter eye-tracking, and Google XYZ bullet engineering.
