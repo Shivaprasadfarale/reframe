@@ -4,13 +4,14 @@ Create your own personal, private **AI Resume Engine** inside **ChatGPT** or **G
 
 ---
 
-# 💎 OPTION 1: Google Gemini Gems (The Unlimited Powerhouse — No Limits!)
+# 💎 OPTION 1: Google Gemini Gems (1-Click Instant Link or Self-Setup)
 
-Google Gemini **does NOT have an 8,000-character limit** and has a massive **1 Million+ token context window**. You can paste this **complete, all-in-one mega-prompt** (which has the entire LaTeX engine and verb taxonomy built right in!).
+> ⚡ **Instant 1-Click Access:** You can use our pre-configured Gemini Gem immediately without any manual setup:  
+> 👉 **[Click Here to Open the Reframe Gemini Gem](https://gemini.google.com/gem/1AIQjvbSNUw5i1Lk5koxQotWmj-GASNhT?usp=sharing)**
 
 ---
 
-### Step 1: Open Gemini Gem Manager
+### If You Want to Build Your Own Gem Manually:
 1. Go to **[gemini.google.com](https://gemini.google.com)** (100% Free with your Google account).
 2. In the left sidebar, click **"Gem manager"** $\rightarrow$ Click **"New Gem"**.
 3. **Name:** `Reframe — Universal ATS Resume Tailor`

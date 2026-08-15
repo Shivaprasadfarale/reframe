@@ -155,18 +155,21 @@ Tailor my resume for this job description:
 
 The quality of your resume — **its natural human phrasing, defensible metrics, and ATS pass rate** — scales directly with the reasoning capability of the AI model you choose.
 
+All prompts, skills, and templates in Reframe are pre-engineered to mathematical perfection. However, how authentically those rules are executed depends on the model:
+
 ### 🏆 Ranked Model Hierarchy for Resume Tailoring:
 
 1. 🥇 **Frontier Claude Models (Claude Sonnet / Opus with Thinking Enabled — Recommended ⭐):**
-   * **Why it's #1:** Produces the most articulate, executive-level human writing. Flawlessly reframes non-obvious career skills and eliminates robotic AI buzzwords.
+   * **Why it's #1:** Generates high ATS match scores while producing completely **natural, human-grade sentences**. It reframes your background organically without awkward buzzword stuffing, ensuring your resume **feels 100% genuine and creates zero defensibility problems when sitting in front of a real human interviewer**.
 2. 🥈 **Frontier Google Gemini Models (Gemini Pro / Ultra Series):**
-   * **Why it's #2:** Massive context window, aggressive ATS keyword matching, and strong, defensible quantitative scope metrics.
+   * **Why it's #2:** Produces extremely aggressive, dense ATS keyword matching (often scoring even higher raw ATS keyword numbers than Claude!). However, its phrasing can occasionally feel slightly *"AI-tailored"* and requires a quick human sanity check before high-stakes interviews.
+   * 👉 Use our **[1-Click Shared Gemini Gem](https://gemini.google.com/gem/1AIQjvbSNUw5i1Lk5koxQotWmj-GASNhT?usp=sharing)** to start tailoring instantly!
 3. 🥉 **Frontier OpenAI Models (GPT-4 / o-Series):**
-   * **Why it's #3:** Strong baseline reasoning, but requires strict prompt adherence to avoid mechanical formula repetition.
+   * **Why it's #3:** Strong baseline reasoning, but requires strict adherence to avoid mechanical formula repetition.
 4. ⚠️ **Small / Budget Models (7B/8B Local Models or Mini/Legacy Tiers):**
-   * **Caution:** Smaller models often repeat rigid phrasing (e.g. literally writing *"as measured by"*), hallucinate unverified percentage stats, and produce resumes that feel visibly "AI-generated" to recruiters.
+   * **Caution:** While Reframe's instructions are airtight, smaller or fast-tier models often ignore subtle instructions, drop formatting rules, or repeat rigid phrasing (e.g. literally writing *"as measured by"*), resulting in lower ATS scores and resumes that feel visibly "AI-generated" to human recruiters.
 
-> 💡 **Core Rule:** *The stronger the AI model you feed Reframe's instructions to, the more authentic, authoritative, and human your final resume will sound.*
+> 💡 **Core Rule:** *The stronger the AI reasoning model you use, the more authentic, authoritative, and human-sounding your final resume will be in both the ATS scanner and the interview room.*
 
 ---
 

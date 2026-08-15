@@ -9,11 +9,11 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┐
-│       🧠 OPTION 1: CLAUDE PLUGIN (RECOMMENDED ⭐ BEST)      │            💎 OPTION 2: GOOGLE GEMINI (FAST & EASY)     │
+│       🧠 OPTION 1: CLAUDE PLUGIN (RECOMMENDED ⭐ BEST)      │            💎 OPTION 2: GOOGLE GEMINI (1-CLICK LINK)    │
 ├─────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
-│ • Highest accuracy, deep reasoning & flawless human phrasing│ • Great for quick results with zero plugin setup.       │
-│ • Uses Claude Sonnet with Extended Thinking enabled.        │ • 1 Million+ token context window.                      │
-│ • 4 built-in automated skills for every step of the search! │ • Fast 10-second gap analysis and LaTeX generation.     │
+│ • Highest human credibility & flawless executive phrasing.  │ • 1-Click Direct Link (Zero setup required!).           │
+│ • Uses Claude Sonnet with Extended Thinking (Effort: Max).  │ • Massive 1M+ token context window.                     │
+│ • 3 built-in automated skills for every step of the search! │ • Rapid gap analysis and aggressive keyword matching.   │
 └─────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────┘
 ```
 
@@ -21,34 +21,35 @@
 
 # 🧠 OPTION 1: Claude Plugin (The Gold Standard — Recommended ⭐)
 
-> ⚠️ **Note:** Setup must be done on your **Laptop / Desktop Web Browser** (Chrome, Safari, Edge, Firefox) at [claude.ai](https://claude.ai).
+> ⚠️ **Note:** Setup must be done on your **Laptop / Desktop Web Browser** (Chrome, Safari, Edge, Firefox) at [claude.ai](https://claude.ai). *(Not available in the mobile app).*
 
 ---
 
-### 🛠️ Step 1: Add the Reframe Plugin to Claude (1-Time Setup — 60 Seconds)
+### 🛠️ Step 1: Add the Reframe Plugin to Claude (1-Time Setup — 30 Seconds)
 
 1. Open **[claude.ai](https://claude.ai)** in your desktop browser.
 2. In the left sidebar, click **"Directory"** (or click your profile icon $\rightarrow$ **"Plugins / Customization"**).
 3. In the Directory window, click the **"Plugins"** tab.
 4. Click the **`+` (Add Marketplace)** button near the top right.
 5. Click **"Add from a repository"**.
-6. Paste our official GitHub repository link:
+6. Paste our official repository link:
    ```text
    https://github.com/Shivaprasadfarale/reframe
    ```
-7. Make sure **"Sync automatically"** is toggled **ON**, then click **"Sync"** (and authorize with GitHub).
+7. Make sure **"Sync automatically"** is toggled **ON**, then click **"Sync"**.
 8. Under the **"Personal"** tab in that marketplace, you will see **Reframe** $\rightarrow$ Click the **`+` (Install)** icon!
 
-🎉 **Reframe is now permanently installed into your Claude account!**
+🎉 **Reframe is now permanently installed into your Claude account!** *(No GitHub accounts or coding needed for users).*
 
 ---
 
 ### 🚀 Step 2: How to Use Your Reframe Plugin (Click-by-Click)
 
-#### 1. Start a New Chat with Claude
+#### 1. Start a New Chat
 * Open a new chat at [claude.ai](https://claude.ai).
-* Make sure your model is set to **Claude 3.5 Sonnet** and **enable "Extended Thinking"** *(this allows Claude to deeply analyze JD keywords before writing)*.
-* Click the **`+` (Tools / Plugins)** icon in the chat box $\rightarrow$ verify that **Reframe** is active with its **4 Skills**.
+* Set your model to **Claude Sonnet** and enable **"Thinking" (Effort: Max)**.  
+  *(Note: Thinking models take a few extra seconds on each step, but they deliver beast-mode, flawless results!)*
+* Click the **`+` (Tools / Plugins)** icon in the chat box $\rightarrow$ verify that **Reframe** is active with its **3 Skills**.
 
 ---
 
@@ -60,7 +61,7 @@ Type `/` and select **`/initialize-profile`**, then paste your raw resume text a
 Here is my current resume and background:
 [PASTE ALL YOUR RESUME TEXT & PROJECTS HERE]
 ```
-👉 **What Claude does:** Claude parses your background, stores your details in its active memory, and asks you clarifying questions (like missing GitHub, Portfolio, or location preferences).
+👉 **What Claude does:** Claude parses your background, locks your details into memory, and asks you clarifying questions (like missing GitHub, Portfolio, or location preferences).
 
 ---
 
@@ -83,31 +84,30 @@ Once you review the gap analysis, select **`/tailor-resume`**:
 /tailor-resume
 Proceed with tailoring!
 ```
-👉 **What Claude does:** Claude generates your complete, millimeter-perfect single-page ATS LaTeX resume inside a single continuous code block!
+👉 **What Claude does:** Claude generates your complete, single-page ATS LaTeX resume code directly inside the chat with a 1-click **Copy Code** button!
 
 ---
 
-#### 5. Skill 4: `/overleaf-export` & Download Your PDF
-1. Open **[Overleaf.com](https://www.overleaf.com)** in your browser.
+#### 5. Download Your PDF (10 Seconds in Overleaf)
+1. Open **[Overleaf.com](https://www.overleaf.com)** in your browser (Free).
 2. Click **"New Project" $\rightarrow$ "Blank Project"**.
-3. Copy the LaTeX code generated by Claude and paste it into Overleaf.
-4. Click the green **"Recompile"** button.
-5. Tap **"Download PDF"**!
+3. Copy the LaTeX code from Claude and paste it into Overleaf.
+4. Click the green **"Recompile"** button $\rightarrow$ Tap **"Download PDF"**!
 
 🎉 **You now have an elite, 100% ATS-compliant PDF resume ready to apply!**
 
 ---
 
-# 💎 OPTION 2: Google Gemini (Fast & Easy Alternative)
+# 💎 OPTION 2: Google Gemini (1-Click Shared Gem Link)
 
-If you prefer an easy, copy-paste option without installing browser plugins:
+No plugins or setup required! You can open our pre-configured Gemini Gem with 1 click:
 
-1. Open **[gemini.google.com](https://gemini.google.com)**.
-2. In the left sidebar, click **"Gem manager"** $\rightarrow$ **"New Gem"**.
-3. **Name:** `Reframe — Universal ATS Resume Tailor`.
-4. **Instructions:** Copy the complete Gemini Master Prompt from **[`CUSTOM_GPT_GUIDE.md`](CUSTOM_GPT_GUIDE.md)** and paste it into the box.
-5. Click **"Save"**.
-6. Whenever you find a job: Open your Gemini Gem $\rightarrow$ Paste JD $\rightarrow$ Review Gap Analysis $\rightarrow$ Copy the LaTeX code into Overleaf!
+👉 **[Click Here to Open the Reframe Gemini Gem](https://gemini.google.com/gem/1AIQjvbSNUw5i1Lk5koxQotWmj-GASNhT?usp=sharing)**
+
+### How to Use the Gemini Gem (Same 3 Simple Steps):
+1. **Send Your Profile:** Paste your current resume text into the chat so Gemini learns your background.
+2. **Send Your Job Description:** Paste any Job Description $\rightarrow$ Gemini will output your Gap Analysis and Fit Score.
+3. **Generate LaTeX Code:** Tell Gemini *"Proceed"* $\rightarrow$ Copy the generated code into [Overleaf.com](https://www.overleaf.com) to download your PDF!
 
 ---
 
@@ -129,13 +129,13 @@ The AI will automatically format it with Google XYZ metrics and remember it for 
 ## ❓ Non-Tech FAQ
 
 <details>
-<summary><b>Q: Why does Claude with Extended Thinking take a few extra seconds?</b></summary>
-Because Claude is actively running deep semantic analysis on every keyword in the job description to calculate your exact fit score and engineer high-impact Google XYZ bullet points. The result is the highest quality resume possible!
+<summary><b>Q: Why does Claude with Max Effort Thinking take a few extra seconds?</b></summary>
+Because Claude is actively running deep semantic reasoning on every keyword in the job description to calculate your exact fit score and engineer natural, authentic bullet points that won't get you caught in interviews. The result is the highest quality resume possible!
 </details>
 
 <details>
 <summary><b>Q: Do I have to pay for Claude, Gemini, or Overleaf?</b></summary>
-<b>No!</b> The Reframe Claude Plugin, Google Gemini, and Overleaf are completely free to use.
+<b>No!</b> The Reframe Claude Plugin, Google Gemini Gem, and Overleaf are completely free to use.
 </details>
 
 <details>
