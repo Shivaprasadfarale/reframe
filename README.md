@@ -1,15 +1,15 @@
-# 🎯 Universal ATS-Optimized Resume Tailoring System
+# 🎯 Reframe — Universal ATS Resume Tailoring Engine
 
-A portable, intelligent, AI-powered resume tailoring framework that dynamically adapts your real-world experience, projects, and skills to match any **Job Description (JD)**.
+> **Reframe your real-world experience, projects, and skills to match any Job Description in seconds.**
 
-Built to guarantee **100% ATS readability, dynamic career-stage polymorphism (Fresher to Senior 2-Page), strict single-page/two-page formatting, interview-defensible metrics, and instant PDF compilation** (via Overleaf or Local IDE).
+`Reframe` is a portable, intelligent, AI-powered resume tailoring framework built to guarantee **100% ATS readability, dynamic career-stage polymorphism (Fresher to Senior 2-Page), strict single-page/two-page formatting, interview-defensible metrics, and instant PDF compilation** (via Overleaf or Local IDE).
 
 ---
 
 ## 📂 Clean Project Architecture
 
 ```
-ats-resume-tailor/
+reframe/
 │
 ├── master_profile.template.json  # Starter profile template for new users
 ├── master_profile.json           # [PRIVATE] Your single source of truth (ignored in git)
@@ -48,8 +48,8 @@ This system dynamically adapts to **any candidate, any domain, and any career le
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/ats-resume-tailor.git
-cd ats-resume-tailor
+git clone https://github.com/your-username/reframe.git
+cd reframe
 ```
 
 ### Step 2: Initialize Your Master Profile
