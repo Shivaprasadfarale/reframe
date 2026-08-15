@@ -1,64 +1,84 @@
 # 🟢 The Absolute Beginner's Guide to Reframe (Zero-Tech Required)
 
 > **Don't know what Git, LaTeX, or VS Code is? No problem!**  
-> This guide was written specifically for non-technical job seekers (Marketing, HR, Finance, Operations, Healthcare, Students) who want a world-class ATS resume **without installing complicated developer software**.
+> This guide is for job seekers (Marketing, HR, Finance, Operations, Healthcare, Students) who want a 100% ATS-compliant resume **using just their Mobile Phone or Web Browser (ChatGPT / Claude + Overleaf)** with zero coding or software installations!
 
 ---
 
-## 🧭 Choose Your Path (Pick What Feels Easiest):
+## 🧭 Choose How You Want to Use Reframe:
 
 ```
 ┌─────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┐
-│               ☁️ PATH 1: ZERO-INSTALL (EASIEST)             │             🖥️ PATH 2: DOWNLOAD ZIP (LOCAL)            │
+│           📱 ☁️ PATH 1: CHATGPT / CLAUDE PROJECTS           │             🖥️ PATH 2: DOWNLOAD ZIP (LOCAL IDE)        │
+│                (100% Mobile App & Web Browser)              │                                                         │
 ├─────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
-│ • 100% runs in your web browser (Chrome, Safari, Edge).    │ • Runs on your computer.                                │
-│ • No Git, no terminal, no software downloads.              │ • No Git required (Just click "Download ZIP").          │
-│ • Uses free ChatGPT/Claude + Overleaf.com.                 │ • 1-click double-click setup.                           │
-│ • Works on Windows, Mac, iPad, or Chromebook!              │ • Perfect if you want to preview PDFs inside VS Code.   │
+│ • Set up once in 2 minutes (100% FREE on ChatGPT & Claude). │ • For users who prefer working on their laptop.         │
+│ • Works inside the official iPhone / Android Mobile Apps.   │ • Download as ZIP directly from GitHub (No Git needed). │
+│ • Works in Chrome, Safari, Edge on any computer or tablet.  │ • 1-Click double-click setup (`setup.bat` / `setup.sh`).│
+│ • Tailor new resumes in 10 seconds from your phone!         │ • Live side-by-side PDF preview in VS Code (`Ctrl+Alt+V`)│
 └─────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# ☁️ PATH 1: The 100% Browser Method (Zero Software to Install)
+# 📱 ☁️ PATH 1: The "1-Time Project Setup" (Mobile Apps & Web Browser)
 
-You can tailor and download your PDF resume completely inside your web browser in **3 simple steps**:
+Both **ChatGPT** and **Claude** offer a **"Projects"** feature for **100% FREE users** on both **Mobile Apps (iOS & Android)** and **Desktop Web Browsers**.
 
-### Step 1: Open Your AI Chat
-Open [ChatGPT (chatgpt.com)](https://chatgpt.com), [Claude (claude.ai)](https://claude.ai), or [DeepSeek](https://chat.deepseek.com).
-
-Copy and paste this message:
-
-```text
-You are an expert ATS Resume Coach. I am going to give you my current resume and a job description. 
-
-Please analyze the job description against my background, give me a quick fit score, and then generate a 100% ATS-compliant single-page LaTeX resume.
-
-Here is my current resume:
-[PASTE YOUR RESUME TEXT HERE]
-
-Here is the Job Description:
-[PASTE THE JOB DESCRIPTION TEXT HERE]
-```
+Once you set it up, you **NEVER have to upload your old resume again**!
 
 ---
 
-### Step 2: Copy the Generated LaTeX Code
-The AI will give you a block of code starting with `\documentclass` and ending with `\end{document}`.  
-Click the **"Copy Code"** button at the top right of the code block.
+### Step 1: Download the 2 Key Files from GitHub
+1. Open this repository on your phone or laptop: **[https://github.com/Shivaprasadfarale/reframe](https://github.com/Shivaprasadfarale/reframe)**
+2. Click on **`AI_INSTRUCTIONS.md`** $\rightarrow$ Copy the text.
+3. Click on **`base_template.tex`** $\rightarrow$ Download or copy the text.
 
 ---
 
-### Step 3: Paste into Overleaf & Download PDF
-1. Go to **[Overleaf.com](https://www.overleaf.com)** (it's a free online Google-Docs-like editor for LaTeX).
-2. Click **"Register"** (or Log in with Google).
-3. Click the green button: **"New Project" $\rightarrow$ "Blank Project"**.
-4. Give it a name (e.g. `My_Tailored_Resume`).
-5. Select all the default text on the screen, delete it, and **paste your copied code from the AI**.
-6. Click the green **"Recompile"** button.
-7. Click the **"Download PDF"** icon (next to the Recompile button).
+### Step 2: Create Your 1-Time Project (Pick ChatGPT or Claude)
 
-🎉 **You're done! Your tailored, ATS-compliant PDF resume is saved to your computer.**
+#### 🤖 Option A: In ChatGPT (Mobile App or Web Browser)
+1. Open the **ChatGPT app** on your phone (or go to [chatgpt.com](https://chatgpt.com)).
+2. In the left sidebar, tap **"+ New Project"** (or create a Project).
+3. Name it: **`Reframe - Resume Tailor`**.
+4. In **Project Instructions**, paste the text from `AI_INSTRUCTIONS.md`.
+5. In **Project Files / Knowledge**, upload `base_template.tex` and your initial resume text.
+6. Done!
+
+#### 🧠 Option B: In Claude (Mobile App or Web Browser)
+1. Open the **Claude app** on your phone (or go to [claude.ai](https://claude.ai)).
+2. In the left sidebar, tap **"Projects" $\rightarrow$ "Create Project"**.
+3. Name it: **`Reframe - Resume Tailor`**.
+4. In **Project Instructions**, paste the text from `AI_INSTRUCTIONS.md`.
+5. In **Project Knowledge**, upload `base_template.tex` and your initial resume text.
+6. Done!
+
+---
+
+### Step 3: Daily Tailoring (Takes Literally 10 Seconds!)
+
+Whenever you find a job on LinkedIn, Indeed, or a company site:
+
+1. Open your saved **"Reframe - Resume Tailor"** Project on your phone or laptop.
+2. Send this message:
+   ```text
+   Tailor my resume for this job description:
+   [PASTE JOB DESCRIPTION]
+   ```
+3. The AI will immediately run a pre-resume fit analysis and output the exact single-page LaTeX code!
+
+---
+
+### Step 4: Generate & Download Your PDF (Free in Overleaf)
+
+1. Open **[Overleaf.com](https://www.overleaf.com)** in your browser (Safari, Chrome, Edge).
+2. Click **"New Project" $\rightarrow$ "Blank Project"**.
+3. Paste the code generated by ChatGPT/Claude.
+4. Click the green **"Recompile"** button.
+5. Tap **"Download PDF"**!
+
+🎉 **You have a millimeter-perfect, 100% ATS-compliant PDF resume ready to apply!**
 
 ---
 
@@ -68,33 +88,24 @@ If you want to use the automated workspace on your computer without touching ter
 
 ### Step 1: Download the Project
 1. Go to the GitHub repository: **[https://github.com/Shivaprasadfarale/reframe](https://github.com/Shivaprasadfarale/reframe)**
-2. Click the green **"<> Code"** button near the top right.
-3. Click **"Download ZIP"**.
-4. Right-click the downloaded `.zip` file on your computer and select **"Extract All..."** (Unzip it).
+2. Click the green **"<> Code"** button near the top right $\rightarrow$ Click **"Download ZIP"**.
+3. Extract the downloaded ZIP folder on your computer.
 
 ---
 
 ### Step 2: 1-Click Setup
-* **Windows Users:** Open the unzipped folder and double-click **`setup.bat`**.
-* **Mac Users:** Open the unzipped folder, double-click **`setup.sh`**.
+* **Windows:** Open the unzipped folder and double-click **`setup.bat`**.
+* **Mac / Linux:** Open the unzipped folder and run **`setup.sh`**.
 
 *(The script will automatically detect and install the compiler for you in the background!)*
 
 ---
 
-### Step 3: Open in VS Code
-1. Download and open **[VS Code (code.visualstudio.com)](https://code.visualstudio.com/)** (Free).
-2. In VS Code, go to **File $\rightarrow$ Open Folder...** and select your unzipped `reframe` folder.
-3. Click the **Extensions icon (🧩)** on the left sidebar (or press `Ctrl + Shift + X`).
-4. Search for **`LaTeX Workshop`** (by James-Yu) and click **Install**.
-
----
-
-### Step 4: Live PDF Preview
-1. Click on **`main.tex`** in the left file list.
-2. Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`).
-3. Your live PDF resume will open in a side-by-side tab!
-4. The final PDF is automatically saved in your **`pdf_output/`** folder ready for job applications!
+### Step 3: Open in VS Code & Live PDF Preview
+1. Open **[VS Code](https://code.visualstudio.com/)** $\rightarrow$ File $\rightarrow$ Open Folder $\rightarrow$ Select your unzipped `reframe` folder.
+2. Install the **LaTeX Workshop** extension (by James-Yu).
+3. Open `main.tex` and press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`).
+4. Your live PDF resume opens in a side-by-side tab and is saved in `pdf_output/`!
 
 ---
 
@@ -102,12 +113,12 @@ If you want to use the automated workspace on your computer without touching ter
 
 <details>
 <summary><b>Q: What does "ATS" mean?</b></summary>
-<b>ATS (Applicant Tracking System)</b> is the automated software (like Workday, Taleo, or Greenhouse) that companies use to screen resumes before a human recruiter reads them. If a resume has complex multi-column tables, text boxes, or graphics, ATS software often crashes or misreads your data. Reframe generates clean, single-column LaTeX code that reads with 100% accuracy on every ATS.
+<b>ATS (Applicant Tracking System)</b> is the automated software (like Workday, Taleo, or Greenhouse) that companies use to screen resumes before a human recruiter reads them. Reframe generates clean, single-column LaTeX code that reads with 100% accuracy on every ATS.
 </details>
 
 <details>
-<summary><b>Q: Do I have to pay for Overleaf or VS Code?</b></summary>
-<b>No!</b> Everything used in this project (Overleaf, VS Code, MiKTeX, and the Reframe framework) is <b>100% free and open-source</b>.
+<summary><b>Q: Do I have to pay for ChatGPT, Claude, or Overleaf?</b></summary>
+<b>No!</b> Projects and file uploads are available to <b>100% free users</b> on both ChatGPT and Claude, and Overleaf is completely free.
 </details>
 
 <details>

@@ -4,8 +4,8 @@
   <a href="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml"><img src="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml/badge.svg" alt="CI Build Status" /></a>
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/ATS%20Pass%20Rate-90%25%2B-success.svg" alt="ATS Pass Rate" />
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="Platform" />
-  <img src="https://img.shields.io/badge/LaTeX-Overleaf%20%7C%20Local-orange.svg" alt="LaTeX" />
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Mobile-lightgrey.svg" alt="Platform" />
+  <img src="https://img.shields.io/badge/LaTeX-Overleaf%20%7C%20Local%20IDE-orange.svg" alt="LaTeX" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome" />
 </p>
 
@@ -20,11 +20,13 @@
 
 ---
 
-> 🍏 **Non-Technical or First Time using GitHub/LaTeX?**  
-> Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)** for a 100% browser-based, zero-installation walkthrough using Overleaf & ChatGPT!  
->  
-> 🧭 **Want to understand the complete career workflow?**  
-> Read the **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)** to see how the engine adapts for all candidate personas!
+> 🍏 **For Non-Technical Users (Mobile App & Web Browser):**  
+> You do **not** need Git, terminal commands, or VS Code! You can use Reframe 100% inside your **Mobile App (ChatGPT / Claude on iOS & Android)** or **Web Browser** paired with **Overleaf** for zero-software PDF downloads.  
+> 👉 Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)** for a 1-time setup walkthrough!
+>
+> 💻 **For Technical Users & Developers (IDE & Local CLI):**  
+> Clone this repository, run the 1-click installer (`setup.bat` / `setup.sh`), work inside your IDE (**VS Code, Cursor, Antigravity**), and enjoy live side-by-side PDF preview (`Ctrl + Alt + V`) with full code customization!  
+> 👉 Read the **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)**!
 
 ---
 
@@ -39,7 +41,7 @@
 `Reframe` is a portable, intelligent, AI-powered framework that uses a **single private data vault (`master_profile.json`)** to dynamically re-frame your real-world experience to match any job description.
 * **Automated Gap Analysis:** Calculates your exact fit score and missing skills *before* writing code.
 * **Google XYZ Formula:** Re-frames bullets using industry action verbs and defensible scope metrics (e.g. *8,000+ records*, *30+ requirements*, *20+ defects*).
-* **Zero Software Hassle:** Works 100% free via Overleaf Cloud or with 1-click in VS Code / Cursor.
+* **Zero Software Hassle:** Works 100% free via Overleaf Cloud, Mobile Apps, or with 1-click in VS Code / Cursor.
 
 ---
 
@@ -70,8 +72,8 @@ reframe/
 ├── 🟡 AUTOMATION & ONBOARDING:
 │   ├── setup.bat / setup.sh        <-- 1-Click environment setup script for your OS
 │   ├── master_profile.template.json<-- Starter schema template (Jane Doe)
-│   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (No software needed)
-│   ├── WORKFLOW_GUIDE.md           <-- Comprehensive step-by-step user journey
+│   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (Mobile & Browser)
+│   ├── WORKFLOW_GUIDE.md           <-- Comprehensive step-by-step developer journey
 │   └── RESUME_RESEARCH_REPORT.md   <-- 10-chapter ATS & recruiter eye-tracking compendium
 │
 └── 🔴 SYSTEM CORE (DO NOT EDIT):
@@ -82,7 +84,7 @@ reframe/
 
 ---
 
-## ⚡ 60-Second Quick Start (3 Simple Steps)
+## ⚡ Quick Start for Developers (3 Simple Steps)
 
 ### Step 1: Clone & Run 1-Click Setup (or Download ZIP)
 ```bash
@@ -192,8 +194,8 @@ Simply open your AI chat and say: <i>"I just built a new project called [Name] u
 
 ## 📚 Deep Documentation & Research
 
-* 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** 100% browser-based, zero-installation guide using Overleaf.
-* 🧭 **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Step-by-step onboarding guide detailing the 4 stages for all candidate personas.
+* 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** 100% browser & mobile-based guide using free ChatGPT/Claude Projects + Overleaf.
+* 🧭 **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Step-by-step developer onboarding guide detailing the 4 stages for all candidate personas.
 * 🔬 **[Master Research Compendium (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md):** 10-chapter deep research report on ATS parsing mechanics (Workday, Greenhouse, Lever), recruiter eye-tracking, and Google XYZ bullet engineering.
 
 ---
