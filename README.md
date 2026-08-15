@@ -3,9 +3,9 @@
 <p align="center">
   <a href="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml"><img src="https://github.com/Shivaprasadfarale/reframe/actions/workflows/ci.yml/badge.svg" alt="CI Build Status" /></a>
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
-  <img src="https://img.shields.io/badge/ATS%20Pass%20Rate-90%25%2B-success.svg" alt="ATS Pass Rate" />
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Mobile-lightgrey.svg" alt="Platform" />
-  <img src="https://img.shields.io/badge/ChatGPT-Custom%20GPT%20Ready-74aa9c.svg" alt="ChatGPT Ready" />
+  <img src="https://img.shields.io/badge/ATS%20Pass%20Rate-95%25%2B-success.svg" alt="ATS Pass Rate" />
+  <img src="https://img.shields.io/badge/Claude%20Plugin-Native%20Ready-6B4FBB.svg" alt="Claude Plugin Ready" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-Gem%20Ready-4285F4.svg" alt="Gemini Ready" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome" />
 </p>
 
@@ -20,14 +20,11 @@
 
 ---
 
-> 🍏 **For Non-Technical Users (Mobile App & Web Browser):**  
-> You do **not** need Git, terminal commands, or VS Code! You can use Reframe 100% inside your **Mobile App (ChatGPT / Claude on iOS & Android)** or **Web Browser** paired with **Overleaf** for zero-software PDF downloads.  
-> 👉 Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)**!
+> 🍏 **For Non-Technical Users (Zero-Install Browser Walkthrough):**  
+> You do **not** need Git, terminal commands, or VS Code! You can use Reframe with **Claude Plugin (Recommended ⭐)** or **Google Gemini** paired with **Overleaf** for 1-click zero-software PDF downloads.  
+> 👉 Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)** for a 60-second walkthrough!
 >
-> 🤖 **Want to create your own ChatGPT Custom GPT or Claude Project?**  
-> Read the **[Custom GPT Master Setup Guide (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md)** for pre-tested, 0-error system instructions and conversation starters!
->
-> 💻 **For Technical Users & Developers (IDE & Local CLI):**  
+> 💻 **For Technical Users & Developers (Local IDE & 1-Click Setup):**  
 > Clone this repository, run the 1-click installer (`setup.bat` / `setup.sh`), work inside your IDE (**VS Code, Cursor, Antigravity**), and enjoy live side-by-side PDF preview (`Ctrl + Alt + V`) with full code customization!  
 > 👉 Read the **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)**!
 
@@ -44,7 +41,7 @@
 `Reframe` is a portable, intelligent, AI-powered framework that uses a **single private data vault (`master_profile.json`)** to dynamically re-frame your real-world experience to match any job description.
 * **Automated Gap Analysis:** Calculates your exact fit score and missing skills *before* writing code.
 * **Google XYZ Formula:** Re-frames bullets using industry action verbs and defensible scope metrics (e.g. *8,000+ records*, *30+ requirements*, *20+ defects*).
-* **Zero Software Hassle:** Works 100% free via Overleaf Cloud, Mobile Apps, or with 1-click in VS Code / Cursor.
+* **Zero Software Hassle:** Works 100% free via Claude Plugin, Google Gemini, Overleaf Cloud, or 1-click in VS Code / Cursor.
 
 ---
 
@@ -75,14 +72,15 @@ reframe/
 ├── 🟡 AUTOMATION & ONBOARDING:
 │   ├── setup.bat / setup.sh        <-- 1-Click environment setup script for your OS
 │   ├── master_profile.template.json<-- Starter schema template (Jane Doe)
-│   ├── CUSTOM_GPT_GUIDE.md         <-- Master configuration for ChatGPT & Claude
-│   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (Mobile & Browser)
+│   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (Claude Plugin & Gemini)
 │   ├── WORKFLOW_GUIDE.md           <-- Comprehensive step-by-step developer journey
 │   └── RESUME_RESEARCH_REPORT.md   <-- 10-chapter ATS & recruiter eye-tracking compendium
 │
 └── 🔴 SYSTEM CORE (DO NOT EDIT):
     ├── base_template.tex           <-- Universal ATS LaTeX skeleton
     ├── AI_INSTRUCTIONS.md          <-- Master prompt directive for any AI model
+    ├── .claude-plugin/             <-- Official Claude Plugin manifest for 1-click install
+    ├── skills/                     <-- Modular Claude skills (/tailor-resume, /gap-analysis)
     └── .vscode/settings.json       <-- Auto-hide compiler clutter & auto-routing rules
 ```
 
@@ -95,7 +93,7 @@ reframe/
 git clone https://github.com/Shivaprasadfarale/reframe.git
 cd reframe
 ```
-*(Non-tech users can click the green **Code $\rightarrow$ Download ZIP** button instead of Git!)*
+*(Non-tech users can read **[NON_TECH_GUIDE.md](NON_TECH_GUIDE.md)** to use the Claude Plugin without Git!)*
 
 Run the automated environment installer for your OS:
 * **Windows (1-Click):** Double-click `setup.bat` (or run `python setup.py` in terminal)
@@ -104,7 +102,7 @@ Run the automated environment installer for your OS:
 ---
 
 ### Step 2: Initialize Your Master Profile (One-Time Setup)
-Open your favorite AI assistant (**Cursor, ChatGPT, Claude, Antigravity, Copilot, or DeepSeek**) and copy-paste this prompt:
+Open your favorite AI assistant (**Claude, Gemini, Cursor, Antigravity, Copilot, or DeepSeek**) and copy-paste this prompt:
 
 ```text
 Here is my current resume in plain text:
@@ -198,8 +196,7 @@ Simply open your AI chat and say: <i>"I just built a new project called [Name] u
 
 ## 📚 Deep Documentation & Research
 
-* 🤖 **[Custom GPT Master Setup (CUSTOM_GPT_GUIDE.md)](CUSTOM_GPT_GUIDE.md):** 0-error system prompt and configuration guide for ChatGPT & Claude.
-* 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** 100% browser & mobile-based guide using free ChatGPT/Claude Projects + Overleaf.
+* 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** Zero-install browser guide using the 1-click Claude Plugin or Google Gemini.
 * 🧭 **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Step-by-step developer onboarding guide detailing the 4 stages for all candidate personas.
 * 🔬 **[Master Research Compendium (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md):** 10-chapter deep research report on ATS parsing mechanics (Workday, Greenhouse, Lever), recruiter eye-tracking, and Google XYZ bullet engineering.
 
