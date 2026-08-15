@@ -144,10 +144,11 @@ Tailor my resume for this job description:
 
 ---
 
-### 🖥️ Method 2: Local 1-Click in IDE (VS Code / Cursor / Antigravity)
-1. Open `main.tex` in your editor.
-2. Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`) to open the live PDF viewer tab.
-3. The ready-to-submit PDF is automatically created in **`pdf_output/<role_name>.pdf`** and `pdf_output/main.pdf`.
+### 🖥️ Method 2: Local 1-Click in IDE (Google Antigravity ⭐ / Cursor / VS Code)
+1. **Google Antigravity IDE (Recommended ⭐):** Reframe is natively designed and optimized for Antigravity with automated background compilation and tool execution!
+2. **For VS Code & Cursor Users:** Install the **LaTeX Workshop** extension (`James-Yu.latex-workshop`) from the Extensions tab.
+3. Open `main.tex` and press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`) to open the live side-by-side PDF preview tab.
+4. The ready-to-submit PDF is automatically saved into **`pdf_output/<role_name>.pdf`** and `pdf_output/main.pdf`.
 
 ---
 

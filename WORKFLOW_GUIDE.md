@@ -1,6 +1,23 @@
 # 🚀 Universal User Workflow Guide (For Any Candidate Background)
 
-This guide documents the exact step-by-step experience for **any candidate from any professional background**—whether you are a **Tech Fresher**, **Senior Software Engineer**, **Non-Tech Corporate Leader (HR, Marketing, Operations, Finance)**, **Career Switcher**, or **Student with zero job experience**—who clones this repository and opens it in **VS Code**, **Cursor**, **Antigravity**, or **Trae**.
+This guide documents the exact step-by-step developer journey for **any candidate from any professional background**—whether you are a **Tech Fresher**, **Senior Software Engineer**, **Non-Tech Corporate Leader (HR, Marketing, Operations, Finance)**, **Career Switcher**, or **Student with zero job experience**—who clones this repository and opens it in **Google Antigravity IDE (Recommended ⭐)**, **Cursor**, or **VS Code**.
+
+---
+
+## 💻 Recommended Development Environments:
+
+```
+┌──────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────┐
+│ Preferred IDE                                │ Why It's Recommended                                                    │
+├──────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+│ 🥇 Google Antigravity IDE (Recommended ⭐)  │ • Reframe was natively designed, engineered, and optimized here!        │
+│                                              │ • Native agentic terminal execution, automatic background verification, │
+│                                              │   and direct PDF compilation without manual setup headaches.            │
+├──────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+│ 🥈 Cursor / VS Code                          │ • Popular AI code editors.                                              │
+│                                              │ • Pair with the "LaTeX Workshop" extension for live Ctrl+Alt+V preview. │
+└──────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -8,7 +25,7 @@ This guide documents the exact step-by-step experience for **any candidate from 
 
 ```mermaid
 flowchart TD
-    A["👤 Any User Clones Repo & Opens VS Code\n(Tech, Non-Tech, Fresher, Senior)"] --> B["⚡ Stage 1: Auto-Configuration\n(Run setup.bat / setup.sh -> Auto-Hide junk, PDF Auto-Routing)"]
+    A["👤 User Clones Repo & Opens Antigravity / Cursor / VS Code\n(Tech, Non-Tech, Fresher, Senior)"] --> B["⚡ Stage 1: Auto-Configuration\n(Run setup.bat/setup.sh OR AI Agent runs setup.py automatically!)"]
     B --> C["📝 Stage 2: 30-Second Interactive AI Onboarding\n(User pastes plain text resume -> AI asks clarifying questions -> saves master_profile.json)"]
     C --> D["🎯 Stage 3: User Pastes ANY Job Description (JD)"]
     D --> E["🛡️ Step 3A: Automated Pre-Resume Gap Analysis\n(Fit Score, Feasibility Check, Matched vs. Missing Skills, Suggestions)"]
@@ -43,6 +60,7 @@ reframe/
 ├── AI_INSTRUCTIONS.md              # 🧠 Universal system directive for any AI model
 ├── README.md                       # 📖 Quick start documentation
 ├── WORKFLOW_GUIDE.md               # 🧭 This complete onboarding guide
+├── NON_TECH_GUIDE.md               # 🍏 Beginner zero-install guide (Claude Plugin & Gemini)
 ├── RESUME_RESEARCH_REPORT.md       # 🔬 Deep-dive 10-chapter research compendium
 ├── tex_source/                     # 📁 Folder for tailored .tex files (for Overleaf users)
 └── pdf_output/                     # 📁 Folder for generated .pdf files (for local PDF users)
@@ -59,12 +77,14 @@ reframe/
 
 ### STAGE 1: Automatic Workspace Setup (0 Seconds, Zero Config)
 
-The user runs the 1-click installer:
+You can run the 1-click installer:
 * **Windows:** Double-click `setup.bat` (or run `python setup.py`).
 * **Mac / Linux:** Run `./setup.sh` (or `python3 setup.py`).
 
+> 💡 **Smart Agent Automation:** If you open the project in **Google Antigravity IDE** or Cursor, you don't even have to run the setup manually! When you give your first prompt in Stage 2, the AI agent will automatically detect your environment, run `python setup.py` in the background, and verify everything for you!
+
 **What happens automatically:**
-* 🛡️ **Zero Clutter:** VS Code automatically hides all compiler junk files (`.aux`, `.log`, `.out`, `.synctex.gz`) from the sidebar.
+* 🛡️ **Zero Clutter:** VS Code / Antigravity automatically hides all compiler junk files (`.aux`, `.log`, `.out`, `.synctex.gz`) from the sidebar.
 * 🚀 **PDF Auto-Routing:** The compiler is pre-instructed to output all generated PDFs directly into `pdf_output/`.
 * ⚡ **Perl Error Bypassed:** Pre-configured to use standard native `pdflatex`—requiring zero Perl installations.
 * 📋 **Master Profile Created:** Copies `master_profile.template.json` to `master_profile.json` if running for the first time.
@@ -75,7 +95,7 @@ The user runs the 1-click installer:
 
 The user only ever has to configure **one file**: their `master_profile.json`.
 
-1. The user opens their AI chat (in Cursor, ChatGPT, Claude, Antigravity, or Copilot) and sends:
+1. The user opens their AI chat (in Antigravity, Cursor, Claude, or ChatGPT) and sends:
    ```text
    Here is my current resume in plain text:
    [COPY-PASTE ALL TEXT FROM YOUR EXISTING RESUME]
@@ -149,24 +169,28 @@ Whenever the user finds a job listing on LinkedIn, Indeed, or a company career s
 ├─────────────────────────────┼─────────────────────────────┼────────────────────────────────────────────────┤
 │ 6. Fresher with ZERO        │ • Experience becomes:       │ • 3–4 detailed technical bullets per project   │
 │    Work Experience          │   \section{Academic Proj}   │ • Injects Hackathons & Open-Source Leadership  │
+│                             │ • Injects Hackathons & Org  │ • 100% canvas fill with relevant coursework    │
 └─────────────────────────────┴─────────────────────────────┴────────────────────────────────────────────────┘
 ```
 
 ---
 
-### STAGE 4: Generating the Final PDF (2 Fast Options)
+### STAGE 4: Generating & Previewing the Final PDF (2 Fast Options)
 
-The user chooses whichever method fits their preference:
+#### Option A: Local Live Preview in IDE (Google Antigravity / Cursor / VS Code)
+1. **Extension Setup (For VS Code & Cursor Users):**
+   * If you are using **VS Code** or **Cursor**, install the **"LaTeX Workshop"** extension (`James-Yu.latex-workshop`) from the Extensions tab. *(In **Google Antigravity IDE**, the agent automatically handles compilation and output!)*
+2. **Open & Preview:**
+   * Open `main.tex` in your editor.
+   * Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`).
+   * The live PDF preview tab opens directly side-by-side with your code!
+3. **Download / Apply:**
+   * Your ready-to-submit PDF is automatically saved in **`pdf_output/<role_name>.pdf`** and `pdf_output/main.pdf`.
 
-#### Option A: Local 1-Click in IDE (VS Code / Cursor / Antigravity)
-1. Open `main.tex` (or `tex_source/<role_name>.tex`).
-2. Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`).
-3. The live PDF preview opens side-by-side, and the clean PDF is automatically saved into **`pdf_output/<role_name>.pdf`**!
-
-#### Option B: Overleaf Cloud (Zero-Install)
-1. Open `tex_source/<role_name>.tex` and copy the code.
+#### Option B: Overleaf Cloud (Zero Software Installation)
+1. Open `tex_source/<role_name>.tex` (or `main.tex`) and copy the code.
 2. Paste into [Overleaf.com](https://www.overleaf.com) and click **Recompile**.
-3. Download your PDF.
+3. Download your PDF in 5 seconds!
 
 ---
 
