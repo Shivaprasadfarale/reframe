@@ -19,8 +19,11 @@
 
 ---
 
-> 🚨 **IMPORTANT: STEP 0 — READ THIS BEFORE YOU START!**  
-> We strongly recommend reading the **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)** before running your first tailoring prompt! It walks you through the 4 stages, explains how the engine adapts to your exact career background (Fresher, Senior, Non-Tech, Career Switcher), and ensures you get a 100% winning resume on your very first try.
+> 🍏 **Non-Technical or First Time using GitHub/LaTeX?**  
+> Read the **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md)** for a 100% browser-based, zero-installation walkthrough using Overleaf & ChatGPT!  
+>  
+> 🧭 **Want to understand the complete career workflow?**  
+> Read the **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)** to see how the engine adapts for all candidate personas!
 
 ---
 
@@ -66,6 +69,7 @@ reframe/
 ├── 🟡 AUTOMATION & ONBOARDING:
 │   ├── setup.bat / setup.sh        <-- 1-Click environment setup script for your OS
 │   ├── master_profile.template.json<-- Starter schema template (Jane Doe)
+│   ├── NON_TECH_GUIDE.md           <-- Click-by-click beginner guide (No software needed)
 │   ├── WORKFLOW_GUIDE.md           <-- Comprehensive step-by-step user journey
 │   └── RESUME_RESEARCH_REPORT.md   <-- 10-chapter ATS & recruiter eye-tracking compendium
 │
@@ -79,11 +83,13 @@ reframe/
 
 ## ⚡ 60-Second Quick Start (3 Simple Steps)
 
-### Step 1: Clone & Run 1-Click Setup
+### Step 1: Clone & Run 1-Click Setup (or Download ZIP)
 ```bash
 git clone https://github.com/Shivaprasadfarale/reframe.git
 cd reframe
 ```
+*(Non-tech users can click the green **Code $\rightarrow$ Download ZIP** button instead of Git!)*
+
 Run the automated environment installer for your OS:
 * **Windows (1-Click):** Double-click `setup.bat` (or run `python setup.py` in terminal)
 * **Mac / Linux (1-Click):** Run `./setup.sh` (or `python3 setup.py` in terminal)
@@ -185,6 +191,7 @@ Simply open your AI chat and say: <i>"I just built a new project called [Name] u
 
 ## 📚 Deep Documentation & Research
 
+* 🍏 **[Beginner / Non-Tech Guide (NON_TECH_GUIDE.md)](NON_TECH_GUIDE.md):** 100% browser-based, zero-installation guide using Overleaf.
 * 🧭 **[Complete User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Step-by-step onboarding guide detailing the 4 stages for all candidate personas.
 * 🔬 **[Master Research Compendium (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md):** 10-chapter deep research report on ATS parsing mechanics (Workday, Greenhouse, Lever), recruiter eye-tracking, and Google XYZ bullet engineering.
 
