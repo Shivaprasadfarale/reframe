@@ -8,8 +8,8 @@ This guide documents the exact step-by-step experience for **any candidate from 
 
 ```mermaid
 flowchart TD
-    A["👤 Any User Clones Repo & Opens VS Code\n(Tech, Non-Tech, Fresher, Senior)"] --> B["⚡ Stage 1: Auto-Configuration\n(.vscode/settings.json loads: Auto-Hide junk, PDF Auto-Routing)"]
-    B --> C["📝 Stage 2: 30-Second AI Onboarding\n(User pastes raw resume/PDF -> AI creates master_profile.json)"]
+    A["👤 Any User Clones Repo & Opens VS Code\n(Tech, Non-Tech, Fresher, Senior)"] --> B["⚡ Stage 1: Auto-Configuration\n(Run setup.bat / setup.sh -> Auto-Hide junk, PDF Auto-Routing)"]
+    B --> C["📝 Stage 2: 30-Second AI Onboarding\n(User pastes plain text resume -> AI creates master_profile.json)"]
     C --> D["🎯 Stage 3: User Pastes ANY Job Description (JD)"]
     D --> E["🛡️ Step 3A: Automated Pre-Resume Gap Analysis\n(Fit Score, Feasibility Check, Matched vs. Missing Skills, Suggestions)"]
     E --> F["✅ User Confirms Tailoring Direction"]
@@ -30,21 +30,22 @@ flowchart TD
 
 When a new user runs:
 ```bash
-git clone https://github.com/your-username/ats-resume-tailor.git
+git clone https://github.com/Shivaprasadfarale/reframe.git
+cd reframe
 ```
 and opens the folder in their editor, they see a clean, production-grade workspace:
 
 ```
-ats-resume-tailor/
-├── .vscode/                      # ⚙️ Pre-configured compiler & auto-hide rules
-├── master_profile.template.json  # 📋 Clean template profile schema (Jane Doe)
-├── base_template.tex             # 📐 Universal polymorphic 1-page ATS LaTeX skeleton
-├── AI_INSTRUCTIONS.md            # 🧠 Universal system directive for any AI model
-├── README.md                     # 📖 Quick start documentation
-├── WORKFLOW_GUIDE.md             # 🧭 This complete onboarding guide
-├── RESUME_RESEARCH_REPORT.md     # 🔬 Deep-dive 10-chapter research compendium
-├── tex_source/                   # 📁 Folder for tailored .tex files (for Overleaf users)
-└── pdf_output/                   # 📁 Folder for generated .pdf files (for local PDF users)
+reframe/
+├── setup.bat / setup.sh / setup.py # ⚡ 1-Click Automated Environment Installer
+├── master_profile.template.json    # 📋 Clean template profile schema (Jane Doe)
+├── base_template.tex               # 📐 Universal polymorphic 1-page ATS LaTeX skeleton
+├── AI_INSTRUCTIONS.md              # 🧠 Universal system directive for any AI model
+├── README.md                       # 📖 Quick start documentation
+├── WORKFLOW_GUIDE.md               # 🧭 This complete onboarding guide
+├── RESUME_RESEARCH_REPORT.md       # 🔬 Deep-dive 10-chapter research compendium
+├── tex_source/                     # 📁 Folder for tailored .tex files (for Overleaf users)
+└── pdf_output/                     # 📁 Folder for generated .pdf files (for local PDF users)
 ```
 
 > [!NOTE]
@@ -58,10 +59,15 @@ ats-resume-tailor/
 
 ### STAGE 1: Automatic Workspace Setup (0 Seconds, Zero Config)
 
-The instant the user opens the project in their IDE, **the `.vscode/settings.json` file applies automatically**:
+The user runs the 1-click installer:
+* **Windows:** Double-click `setup.bat` (or run `python setup.py`).
+* **Mac / Linux:** Run `./setup.sh` (or `python3 setup.py`).
+
+**What happens automatically:**
 * 🛡️ **Zero Clutter:** VS Code automatically hides all compiler junk files (`.aux`, `.log`, `.out`, `.synctex.gz`) from the sidebar.
 * 🚀 **PDF Auto-Routing:** The compiler is pre-instructed to output all generated PDFs directly into `pdf_output/`.
 * ⚡ **Perl Error Bypassed:** Pre-configured to use standard native `pdflatex`—requiring zero Perl installations.
+* 📋 **Master Profile Created:** Copies `master_profile.template.json` to `master_profile.json` if running for the first time.
 
 ---
 
@@ -71,11 +77,17 @@ The user only ever has to configure **one file**: their `master_profile.json`.
 
 1. The user opens their AI chat (in Cursor, ChatGPT, Claude, Antigravity, or Copilot) and sends:
    ```text
-   Here is my current resume:
-   [PASTES RAW RESUME TEXT OR UPLOADS RESUME PDF]
+   Here is my current resume in plain text:
+   [COPY-PASTE ALL TEXT FROM YOUR EXISTING RESUME]
 
    Read master_profile.template.json and initialize my master_profile.json!
    ```
+
+> [!TIP]
+> **💡 Pro-Tip on Input Quality: Plain Text > PDF / Image Uploads!**  
+> While modern AI models can accept uploaded PDF files or screenshots of resumes, **copy-pasting plain text directly from your resume is 100% recommended**.  
+> * **Why?** PDF text extractors and image OCR frequently scramble multi-column layouts, misread dates, or merge unrelated bullet points. Plain text provides the AI with clean, unambiguous data, guaranteeing 100% accurate profile initialization.
+
 2. **What the AI does automatically:**
    * Extracts their real name, contact details, education, past jobs, projects, and skills.
    * Dynamically formats optional links (adds GitHub/Portfolio if they have one; omits them cleanly if they don't).
@@ -92,7 +104,7 @@ Whenever the user finds a job listing on LinkedIn, Indeed, or a company career s
 1. **User sends to AI:**
    ```text
    Tailor my resume for this job description:
-   [PASTES JOB DESCRIPTION]
+   [COPY-PASTE THE JOB DESCRIPTION TEXT]
    ```
 
 2. **Step 3A — Automated Pre-Resume Gap Analysis:**
@@ -157,13 +169,26 @@ The user chooses whichever method fits their preference:
 
 ---
 
-## ⚙️ What Happens Automatically Behind the Scenes
+## 📈 Long-Term Career Lifecycle Management (How to Evolve Your Profile)
 
-| Automation Feature | How It Works Automatically |
-| :--- | :--- |
-| **Dynamic Header Formatting** | Formats active contact links (`Phone`, `Email`, `LinkedIn`, `GitHub`, `Portfolio`) without broken or orphaned `|` delimiters if a link is omitted. |
-| **Special Character Escaping** | The AI automatically escapes reserved LaTeX tokens (`C\#`, `AT\&T`, `50\%`, `user\_id`, `\$10k`, `\textasciitilde`). |
-| **Dynamic Density Balancing** | Automatically balances bullet depth so that freshers get a **100% full single page** (zero bottom gaps) and senior engineers get a balanced 2-page document (zero 4-line overflow traps). |
-| **Canonical ATS Headings** | Guarantees standard dictionary section titles so that Workday, Greenhouse, Lever, and Taleo parsers never misclassify data. |
-| **Directory Cleanliness** | `.vscode/settings.json` keeps the workspace clean: `.tex` files stay in `tex_source/` and `.pdf` files stay in `pdf_output/`. |
-| **Privacy Protection** | `.gitignore` automatically prevents personal resumes and phone numbers from ever being pushed to public GitHub repositories. |
+As your career progresses over the next 2 to 5 years, you never have to re-write your resume from scratch:
+
+* **When you complete a new project:**  
+  Tell your AI: *"I built a new project [Name] with [Stack] that [Accomplishment]. Add it to my projects bank in master_profile.json."*
+* **When you get a new job / promotion:**  
+  Tell your AI: *"I was promoted to [Title] at [Company]. My key accomplishments are [A, B, C]. Add this role to my experience bank in master_profile.json."*
+* **When you learn a new certification / skill:**  
+  Tell your AI: *"Add AWS Solutions Architect and Terraform to my master_profile.json skills bank."*
+
+Your `master_profile.json` serves as your **permanent career vault**, growing richer with every project and accomplishment you achieve!
+
+---
+
+## 🧠 The 5 Golden Rules of Prompting Your AI
+
+1. **Always provide plain text for both your resume and the JD.**
+2. **Never skip the Step 1 Gap Analysis.**
+3. **If a bullet seems too long or overflows to page 2, simply tell the AI:**  
+   > *"Shorten the bullets in Project 1 by 1 line to ensure a strict 1-page fit."*
+4. **Never let an AI invent fake companies or fake degrees.** Use real experiences and let the AI frame them accurately.
+5. **Keep your local files private.** `.gitignore` protects you, so you can tailor dozens of resumes without worrying about pushing private data to GitHub.
