@@ -11,21 +11,55 @@
 ```
 reframe/
 │
-├── master_profile.template.json  # Starter profile template for new users
-├── master_profile.json           # [PRIVATE] Your single source of truth (ignored in git)
-├── base_template.tex             # Universal polymorphic 1-page ATS LaTeX skeleton
-├── AI_INSTRUCTIONS.md            # Universal system instructions for any AI model
-├── README.md                     # Documentation & quick start guide
-├── WORKFLOW_GUIDE.md             # Complete user onboarding & stage-by-stage guide
-├── RESUME_RESEARCH_REPORT.md     # Deep-dive 10-chapter research compendium
-├── main.tex                      # Active workspace LaTeX resume (updated on each new JD)
+├── setup.bat / setup.sh / setup.py # ⚡ 1-Click Automated Setup & Dependency Installer
+├── master_profile.template.json    # 📋 Starter profile template for new users
+├── master_profile.json             # 👤 [PRIVATE] Your single source of truth (ignored in git)
+├── base_template.tex               # 📐 Universal polymorphic 1-page ATS LaTeX skeleton
+├── AI_INSTRUCTIONS.md              # 🧠 Universal system instructions for any AI model
+├── README.md                       # 📖 Documentation & quick start guide
+├── WORKFLOW_GUIDE.md               # 🧭 Complete user onboarding & stage-by-stage guide
+├── RESUME_RESEARCH_REPORT.md       # 🔬 Deep-dive 10-chapter research compendium
+├── main.tex                        # 📄 Active workspace LaTeX resume (updated on each new JD)
 │
-├── 📁 tex_source/                # Dedicated role-specific .tex files (saved here)
+├── 📁 tex_source/                  # 📝 Dedicated role-specific .tex files (saved here)
 │   └── <company_role>.tex
 │
-└── 📁 pdf_output/                # Dedicated role-specific .pdf files (generated here)
+└── 📁 pdf_output/                  # 🖨️ Dedicated role-specific .pdf files (generated here)
     └── <company_role>.pdf
 ```
+
+---
+
+## ⚡ Quick Start Guide (3 Simple Steps)
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/Shivaprasadfarale/reframe.git
+cd reframe
+```
+
+### Step 2: 1-Click Automated Setup (Zero Configuration)
+Run the automated environment installer for your OS:
+* **Windows (1-Click):** Double-click `setup.bat` or run:
+  ```bash
+  python setup.py
+  ```
+* **Mac / Linux (1-Click):**
+  ```bash
+  chmod +x setup.sh && ./setup.sh
+  ```
+> **What the script does automatically:**  
+> 1. Verifies/Installs the LaTeX compiler for your OS (`winget` on Windows, `brew` on Mac, `apt` on Linux).  
+> 2. Initializes your local `master_profile.json`.  
+> 3. Runs a pre-flight test compilation to ensure everything works 100%!
+
+### Step 3: Tailor for Any Job Anytime!
+Whenever you find a job on LinkedIn, Indeed, or company portals, open your AI chat and paste:
+> *"Tailor my resume for this job description: [paste JD text]"*
+
+The AI will:
+1. 🛡️ Run a **Pre-Resume Gap Analysis** (Fit score, matched skills vs. missing gaps, project recommendations).
+2. 📄 Generate your customized LaTeX code into `main.tex` and save an archive copy in **`tex_source/`** and **`pdf_output/`**!
 
 ---
 
@@ -44,31 +78,6 @@ This system dynamically adapts to **any candidate, any domain, and any career le
 
 ---
 
-## ⚡ Quick Start Guide (3 Simple Steps)
-
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/your-username/reframe.git
-cd reframe
-```
-
-### Step 2: Initialize Your Master Profile
-You only need to configure **one file**: `master_profile.json`.
-
-* **Option A (Super Easy — AI Automated):** Open your AI chat (ChatGPT, Claude, Cursor, Antigravity) and paste:
-  > *"Here is my existing resume: [paste your resume text/PDF]. Read `master_profile.template.json` and initialize my `master_profile.json`!"*
-* **Option B (Manual):** Copy `master_profile.template.json` to `master_profile.json` and fill in your details.
-
-### Step 3: Tailor for Any Job Anytime!
-Whenever you find a job on LinkedIn, Indeed, or company portals:
-> *"Tailor my resume for this job description: [paste JD text]"*
-
-The AI will:
-1. 🛡️ Run a **Pre-Resume Gap Analysis** (Fit score, matched skills vs. missing gaps, project recommendations).
-2. 📄 Generate your customized LaTeX code into `main.tex` and save an archive copy in **`tex_source/`** and **`pdf_output/`**!
-
----
-
 ## 🖨️ How to Get Your Resume (Choose Your Method)
 
 ### ☁️ Method 1: Overleaf Users (Copy LaTeX Code)
@@ -79,12 +88,9 @@ The AI will:
 ---
 
 ### 🖥️ Method 2: Local PDF Users (1-Click in IDE)
-1. **Prerequisites:** 
-   * Install [MiKTeX](https://miktex.org/download) (Windows) or [MacTeX](https://www.tug.org/mactex/) (Mac).
-   * Install the **LaTeX Workshop** extension in VS Code / Cursor.
-2. Open `main.tex` in your editor.
-3. Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`) to open the live PDF viewer tab.
-4. The ready-to-submit PDF is automatically created in **`pdf_output/<role_name>.pdf`** and `pdf_output/main.pdf`.
+1. Open `main.tex` in your editor (VS Code, Cursor, Antigravity).
+2. Press **`Ctrl + Alt + V`** (Mac: `Cmd + Option + V`) to open the live PDF viewer tab.
+3. The ready-to-submit PDF is automatically created in **`pdf_output/<role_name>.pdf`** and `pdf_output/main.pdf`.
 
 ---
 
@@ -92,36 +98,6 @@ The AI will:
 
 * 🧭 **[User Workflow Guide (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md):** Complete step-by-step onboarding guide detailing the 4 stages for all candidate personas.
 * 🔬 **[Master Research Compendium (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md):** 10-chapter deep research report on ATS parsing mechanics (Workday, Greenhouse, Lever), recruiter eye-tracking, and Google XYZ bullet engineering.
-
----
-
-## 🛠️ Troubleshooting & Common Issues (And How to Fix Them)
-
-### 1. `latexmk did not succeed: Perl not found` (Windows)
-* **Why it happens:** By default, LaTeX Workshop tries to use `latexmk`, which requires Perl on Windows.
-* **The Fix:** We have already configured [`.vscode/settings.json`](.vscode/settings.json) to use native `pdflatex` directly instead of `latexmk`.
-
----
-
-### 2. Multiple MiKTeX Popups asking to "Install Package X"
-* **Why it happens:** On Windows, MiKTeX defaults to *"Ask me first"* before downloading fonts/packages.
-* **The Fix:**
-  1. Open **MiKTeX Console** from your Windows Start Menu.
-  2. Go to **Settings** in the left sidebar.
-  3. Under *"You can choose whether missing packages are to be installed on-the-fly"*, select **"Always" (or "Yes")**.
-  4. Click **Apply**. Now MiKTeX installs packages silently with **zero popups**.
-
----
-
-### 3. Font Error: `bchb8r not found` / Missing Font Metrics
-* **Why it happens:** Custom fonts like Charter require external Type-1 font metric map files that may be missing on local TeX setups.
-* **The Fix:** Our template uses `\usepackage{mathptmx}` (Standard Times Roman), which is **100% built into LaTeX natively** across Windows, Mac, and Linux.
-
----
-
-### 4. Special Character Crashes (`#`, `&`, `%`, `_`, `$`)
-* **Why it happens:** In LaTeX, these are reserved tokens.
-* **The Fix:** Our system automatically escapes them (`\#`, `\&`, `\%`, `\_`, `\$`, `\textasciitilde`), preventing compiler crashes.
 
 ---
 
