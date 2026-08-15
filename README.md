@@ -183,7 +183,8 @@ If you upload your generated resume to commercial "Free ATS Checker" websites (J
 2. 🤖 **Dumb Literal Word-Counting:**  
    Online checkers compare your resume against the *entire* raw text of a job post—including legal disclaimers, company benefits (*"cab facility"*, *"401k"*, *"equal opportunity"*), and HR boilerplate. If you don't copy-paste their perks paragraph, they deduct 30 points!
 3. 🏢 **How Real Corporate ATS Systems Work (Workday, Greenhouse, Taleo, Lever):**  
-   Real enterprise systems used by companies like Google, Amex, and Amazon do **NOT** use dumb word-counters. They use **Named Entity Recognition (NER) and Semantic Vector Embeddings** to extract clean skills (*SQL, Python, Jira, FRDs, etc.*).
+   Real enterprise systems used by companies like Google, Amex, and Amazon do **NOT** use dumb word-counters. They use **Named Entity Recognition (NER) and Semantic Vector Embeddings** to extract clean skills (*SQL, Python, Jira, FRDs, etc.*).  
+   👉 *You can read our **[Comprehensive ATS & Recruiter Research Report (RESUME_RESEARCH_REPORT.md)](RESUME_RESEARCH_REPORT.md)** for a deep algorithmic breakdown of how modern enterprise ATS parsers actually evaluate resumes!*
 4. 🎯 **Reframe is Engineered for the Real World:**  
    Reframe produces 100% clean single-column UTF-8 text streams that real corporate ATS parsers index flawlessly, while keeping your wording natural and defensible when you sit across from a human interviewer!
 
