@@ -74,14 +74,17 @@ When the user provides a Job Description (JD), you **MUST NOT** blindly generate
 Analyze the provided JD against `master_profile.json` and present a structured report:
 
 1. **Role Alignment Score**: Calculate an estimated match percentage (e.g., *75% Fit - Strong Data & Testing Match*).
-2. **Role Feasibility Warning**: If the user is applying outside their background (e.g. HR, DevOps, Hardware, Sales), explicitly warn them if their profile lacks foundational prerequisites.
-3. **Skill Matrix**:
+2. **Location Alignment Check**: Compare the target Job Description location against the candidate's profile location. State:
+   * 📍 *"Job Location: [JD City / Remote] | Stored Profile Location: [Candidate City]"*
+3. **Role Feasibility Warning**: If the user is applying outside their background (e.g. HR, DevOps, Hardware, Sales), explicitly warn them if their profile lacks foundational prerequisites.
+4. **Skill Matrix**:
    * ✅ **Matched Skills:** Skills present in `master_profile.json` that match the JD.
    * ❌ **Missing Gaps:** High-priority JD requirements missing from `master_profile.json`.
-4. **Actionable Project & Skill Recommendations**:
+5. **Actionable Project & Skill Recommendations**:
    * Suggest 1–2 specific mini-projects or skills the user should build or learn to bridge the gaps.
-5. **Interactive Consultation**:
-   * Ask the user how they wish to proceed (e.g., *"Would you like me to adapt your existing projects [Project A & B], or emphasize [Skill X] before generating the LaTeX code?"*).
+6. **Interactive Consultation Checkpoint**:
+   * End with the consultation question:
+     > *"Would you like me to adapt your existing projects and generate your Overleaf-ready LaTeX code now? Also, please let me know if you want me to set the header location to [JD Location] (for local ATS matching) or keep your primary location [Candidate City]?"*
 
 ---
 

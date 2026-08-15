@@ -215,6 +215,13 @@ Have a question, encountered an issue, or want to suggest a new resume template 
 Simply open your AI chat and say: <i>"I just built a new project called [Name] using [Stack] that does [Description]. Add it to my master_profile.json!"</i> The AI will automatically format it with multiple framing presets.
 </details>
 
+<details>
+<summary><b>5. Why do online "Free ATS Checker" websites give 50%–70% scores on generated PDFs?</b></summary>
+<b>Because commercial ATS checker websites are for-profit subscription businesses selling $30–$50/month rewrite services.</b><br>
+Their algorithms are intentionally tuned to artificially penalize resumes by counting every single word in the job post (including boilerplate disclaimers like <i>"equal opportunity"</i>, <i>"benefits"</i>, and <i>"hybrid"</i>). If you don't literally copy-paste the benefits paragraph, they deduct 30 points!<br><br>
+<b>Real enterprise ATS systems (Workday, Greenhouse, Taleo, Lever, iCIMS)</b> use semantic entity matching (NER & vector embeddings). Reframe is engineered specifically for real enterprise ATS scanners and human hiring managers—extracting 100% clean UTF-8 text without robotic word-stuffing!
+</details>
+
 ---
 
 ## 📚 Deep Documentation & Research

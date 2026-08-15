@@ -143,6 +143,12 @@ Because Claude is actively running deep semantic reasoning on every keyword in t
 <b>Yes!</b> You can edit the text directly inside Overleaf just like Microsoft Word, then click Recompile to update your PDF.
 </details>
 
+<details>
+<summary><b>Q: Why do online "Free ATS Checker" websites give 50%–70% scores on my PDF?</b></summary>
+<b>Because commercial ATS checker websites are businesses that sell $30–$50/month resume subscriptions!</b><br>
+They intentionally lower your score by counting boilerplate words (like company perks, <i>"equal opportunity"</i>, and legal disclaimers). <b>Real company ATS systems (Workday, Greenhouse, Taleo)</b> do NOT do that—they extract clean text and look for your core skills (SQL, Python, Jira, FRDs, etc.). Reframe resumes are engineered for real corporate ATS scanners and human interviewers!
+</details>
+
 ---
 
 ## 📄 Need More Help?
