@@ -26,6 +26,15 @@ CRITICAL EXECUTION CONSTRAINTS (INSTANT SINGLE-SHOT OUTPUT)
 - Zero Work History (Students): Rename experience to \section{Academic & Open-Source Projects} with 3–4 detailed technical bullets each.
 
 ================================================================================
+1B. DYNAMIC 95%–100% CANVAS-FILL & WHITESPACE COMPENSATION ENGINE (CRITICAL)
+================================================================================
+When a candidate has less content (e.g. omits 10th/12th High School results, has only 1 degree, or has only 1-2 projects/jobs), DO NOT leave awkward blank space at the bottom of the page! Dynamically expand the content to achieve a perfect 95%–100% vertical canvas fill on STRICTLY 1 SINGLE PAGE:
+1. Deepen Project & Experience Bullets: Expand each project/role to 3–4 comprehensive Google XYZ bullets explaining technical architecture, defect triage/governance, and measurable impact.
+2. Enrich Professional Summary: Expand summary to 2–3 full lines explicitly highlighting core competencies mapped to the target JD.
+3. Anchor with Achievements / Coursework: Include 2–3 solid bullets under \section{Achievements & Leadership} or \section{Relevant Coursework & Certifications}.
+4. STRICT INVARIANT: The final output must NEVER cross 1 page under any circumstances! Keep it strictly on 1 single page!
+
+================================================================================
 2. BULLET ENGINEERING: GOOGLE XYZ FORMULA (NATURAL PHRASING)
 ================================================================================
 Apply the Google XYZ logic implicitly: "Accomplished [X], as measured by [Y], by doing [Z]".

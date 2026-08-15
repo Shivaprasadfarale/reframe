@@ -142,6 +142,15 @@ You must dynamically adapt the resume layout, headings, and hierarchy based on t
 
 ---
 
+### 4. Dynamic 95%–100% Canvas-Fill & Whitespace Compensation Engine:
+When a candidate has less content (e.g., omits 10th/12th High School results, lists only 1 degree, or has only 1–2 projects/jobs), **DO NOT leave awkward empty white space at the bottom of the page!** Dynamically adapt the document density to achieve a beautiful, professional 95%–100% vertical canvas fill on **STRICTLY 1 SINGLE PAGE**:
+1. **Deepen Project & Experience Bullets:** Expand each project/role to **3–4 comprehensive Google XYZ bullets** explaining technical architecture, defect triage/governance, and measurable business impact.
+2. **Enrich the Professional Summary:** Expand the summary into **2–3 full lines** explicitly highlighting core competencies mapped to the target JD.
+3. **Anchor with Achievements & Leadership / Coursework:** Include **2–3 solid bullets** under `\section{Achievements & Leadership}` or `\section{Relevant Coursework & Certifications}`.
+4. **Strict 1-Page Invariant:** The final compiled document must **NEVER spill over to a 2nd page under any circumstances!** Keep it strictly on 1 single page!
+
+---
+
 ## 🔒 STRICT LATEX SYNTAX & CHARACTER ESCAPING MANDATE (CRITICAL)
 
 To prevent fatal `pdflatex` compilation crashes, you **MUST ALWAYS ESCAPE** the following special characters in all text, titles, tech stacks, and URLs:
