@@ -108,14 +108,14 @@ Generate the complete single-page LaTeX code inside a single continuous code blo
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-1pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-1pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=2pt]}
