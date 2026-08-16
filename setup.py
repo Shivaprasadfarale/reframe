@@ -232,24 +232,19 @@ def verify_or_install_latex():
 def test_compilation():
     print("\n[4/4] Running Pre-Flight Compilation Test...")
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    main_tex = os.path.join(base_dir, "main.tex")
-    pdf_out_dir = os.path.join(base_dir, "pdf_output")
-    os.makedirs(pdf_out_dir, exist_ok=True)
+    build_script = os.path.join(base_dir, "build.py")
 
-    if not os.path.exists(main_tex):
-        print("  [i] main.tex not present yet. Skipping build test.")
-        return
-
-    if check_command("pdflatex"):
+    if os.path.exists(build_script) and check_command("pdflatex"):
         try:
-            cmd = ["pdflatex", "-interaction=nonstopmode", f"-output-directory={pdf_out_dir}", main_tex]
-            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            res = subprocess.run([sys.executable, build_script], cwd=base_dir, text=True)
             if res.returncode == 0:
-                print("  [+] Pre-flight test compilation SUCCEEDED! main.pdf generated in pdf_output/.")
+                print("  [+] Pre-flight test compilation SUCCEEDED! Production 1-page PDF verified.")
             else:
-                print("  [!] Test compilation completed. Check LaTeX logs if errors occurred.")
+                print("  [!] Pre-flight build test completed with warnings/errors.")
         except Exception as e:
             print(f"  [!] Could not run build test: {e}")
+    elif check_command("pdflatex"):
+        print("  [+] pdflatex detected and ready.")
     else:
         print("  [i] pdflatex not yet in current shell PATH. Please restart your IDE/terminal.")
 

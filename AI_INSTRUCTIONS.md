@@ -19,10 +19,10 @@ These are the 12 non-negotiable rules. Each is explained in detail later. **Viol
 6. **NO FAKE METRICS.** Every number must be a defensible scope count ("8,000+ records") or verifiable improvement (with measurement method). No round-percentage guesses. See §METRIC HONESTY MANDATE.
 7. **NO KEYWORD STUFFING.** Each JD keyword appears 1-2x max across the resume. See §KEYWORD OPTIMIZATION.
 8. **NO PERSONAL PRONOUNS.** Never use I, me, my, we, our in any section. See §GOLDEN FORMATTING STANDARDS.
-9. **CONTENT BUDGET TABLE.** Count your bullets and character lengths BEFORE writing LaTeX. If you have 2 projects + 3 education entries, MAX 3 bullets per project at MAX 170 chars each. See §4b.
-10. **USE `{\&}` INSIDE HEADINGS.** The `\resumeProjectHeading` and `\resumeSubheading` commands use `tabular*`. Using `\&` inside them will CRASH. Use `{\&}` instead. See §ESCAPING.
-11. **SELF-AUDIT BEFORE OUTPUT.** Check content budget, AI tone, weak words, pronouns, keyword repetition, and LaTeX syntax BEFORE writing `main.tex`. See §STEP 2a.
-12. **STRICTLY 1 PAGE.** For 0-5 YoE candidates, the compiled PDF must be exactly 1 page. No exceptions.
+9. **SOLID 2-LINE BULLETS & NO ORPHAN WRAPS.** Every bullet must be a solid, deep 2-liner (180–235 chars) where Line 2 is 60–90% full. NEVER write shallow 130–174 char bullets that leave 1–3 orphan words on Line 2. See §4 & §4b.
+10. **STRICT YET-TO-MASTER SEPARATION.** Never put unverified/aspirational skills directly into `mastered`. Put them in `yet_to_master` with role and date metadata. See §YET-TO-MASTER PROTOCOL.
+11. **USE `{\&}` INSIDE HEADINGS.** The `\resumeProjectHeading` and `\resumeSubheading` commands use `tabular*`. Using `\&` inside them will CRASH. Use `{\&}` instead. See §ESCAPING.
+12. **SELF-AUDIT & STRICT 1 PAGE.** Audit character budgets, orphan wraps, AI tone, weak words, pronouns, keywords, and LaTeX syntax before delivery. Final compiled PDF must be strictly 1 page. See §STEP 2a.
 
 ---
 
@@ -32,6 +32,7 @@ These are the 12 non-negotiable rules. Each is explained in detail later. **Viol
 reframe/
 │
 ├── setup.bat / setup.sh / setup.py # ⚡ 1-Click Automated Setup & Dependency Installer
+├── build.py                        # 🛡️ Deterministic Builder, Linter & 1-Page Compiler Engine
 ├── master_profile.json             # [PRIVATE] Single source of truth (profile, projects, experience bank)
 ├── master_profile.template.json    # Starter template for new users
 ├── base_template.tex               # Structural 1-page ATS LaTeX layout (Times font, tight geometry)
@@ -158,10 +159,12 @@ Analyze the provided JD against `master_profile.json` and present a structured, 
    * ⚠️ *"Application Risk Level: [Low/Medium/High] — [brief explanation of the biggest weakness a recruiter will spot]"*
 
 8. **When User Confirms "Add Missing Skills":**
-   If the user says "add everything, I'll learn" for missing skills:
-   * Add the skills to the generated `main.tex` resume Skills section only.
-   * Create a new `skills_bank` preset in `master_profile.json` keyed to this role.
-   * Do NOT add fabricated experience bullets — only add to Skills section.
+   If the user says "yes add", "add everything", or "I'll learn":
+   * **Do NOT dump unverified skills into `skills_bank.mastered`.**
+   * Filter skills against the **Skills Relevance Filter** (§Skills Relevance Filter): only include skills that are JD-LISTED, JD-IMPLIED, or standard for the target domain. Do NOT add irrelevant skills (e.g. no Power BI/Excel for a core Systems Engineer role).
+   * For skills the candidate does **not yet have**: Add them to `skills_bank.yet_to_master` with structured objects: `{"skill": "...", "added_for_role": "<role_slug>", "added_date": "YYYY-MM", "category": "..."}`.
+   * `build.py` will dynamically merge `yet_to_master` skills into `main.tex`'s Skills section for this specific role while preserving profile honesty in `master_profile.json`.
+   * Do NOT fabricate project or experience bullets — only adapt skills.
 
 9. **Interactive Consultation Checkpoint**:
    * End with the consultation question:
@@ -218,26 +221,34 @@ Before writing the LaTeX file, perform this internal self-audit on your generate
 
 Only proceed to write `main.tex` AFTER all checks pass.
 
-#### STEP 2b: Write & Save Files
+#### STEP 2b: Save Presets & Deterministic Build
 
 When generating the tailored resume:
-1. Read `base_template.tex` and copy the preamble verbatim into `main.tex`.
-2. Write the document body using only the commands defined in `base_template.tex`.
-3. Save a dedicated named file into **`tex_source/<role_slug>.tex`** (e.g., `tex_source/amazon_ba_insc.tex`).
-4. Save the new role-specific bullet framings back into `master_profile.json` under each project/experience entry's `framing_presets` object, keyed as `<company>_<role_slug>`.
+1. Save the new role-specific bullet framings back into `master_profile.json` under each project/experience entry's `framing_presets` object, keyed as `<company>_<role_slug>`.
+2. Save the role skills under `skills_bank.mastered.<company>_<role_slug>`.
+3. Run the automated builder & auditor:
+   ```bash
+   python build.py --role <company>_<role_slug> --location "<Candidate City>"
+   ```
+   This script automatically:
+   - Escapes special characters deterministically (`&` inside headings $\to$ `{\&}`, `%` $\to$ `\%`, etc.)
+   - Audits bullet lengths against the Content Budget Table (130–185 chars)
+   - Linters against banned AI buzzwords and weak words
+   - Compiles `main.tex` via `pdflatex` to `main.pdf`
+   - Copies production artifacts to `tex_source/<role_slug>.tex` and `pdf_output/<role_slug>.pdf`
 
-#### STEP 2c: Compile & Verify (If Local Compilation Available)
+#### STEP 2c: Verify & Auto-Remediate (Closed-Loop Guarantee)
 
-After writing `main.tex`, you MUST:
-1. Run `pdflatex -interaction=nonstopmode main.tex`.
-2. Verify the output is **exactly 1 page** (for 0–5 YoE candidates).
-3. If 2+ pages → trim content using the Content Budget Table and recompile.
-4. If compilation errors → fix LaTeX syntax and recompile.
-5. Save the compiled PDF to `pdf_output/<role_slug>.pdf`.
-6. Only deliver to the user after successful 1-page compilation.
+If `build.py` flags any errors or warnings:
+1. Read the exact failure diagnostics in the terminal report.
+2. If a bullet is too short (< 130 chars) or too long (> 185 chars) $\to$ adjust that bullet's text in `master_profile.json`.
+3. If a banned word or pronoun is flagged $\to$ replace it with a strong action verb.
+4. Re-run `python build.py --role <company>_<role_slug>` until **all checks return [PASS]** and the PDF is **strictly 1 page**.
+5. Only deliver to the user after 100% successful verification.
 
-If no local compiler is available (e.g., web-based ChatGPT), explicitly tell the user:
-> *"Please compile on Overleaf and verify it fits on 1 page. If it overflows, tell me and I'll trim."*
+If no local compiler is available (e.g., web-based ChatGPT without terminal access):
+- Output the complete, verified LaTeX document in a single code block and instruct the user:
+  > *"Please compile on Overleaf and verify it fits on 1 page. If it overflows, tell me and I'll trim."*
 
 ---
 
@@ -263,6 +274,18 @@ Modern recruiters actively flag AI-generated resumes. Your output MUST sound lik
 3. **Every adjective must be earned.** Do not call something "robust" or "scalable" unless you explain HOW.
 4. **Read each bullet aloud.** If it sounds like a press release or marketing copy, rewrite it.
 5. **Vary sentence structure.** Do not start every bullet with the identical pattern of `[Past-tense verb] + [adjective] + [noun]`.
+
+### 🛡️ ANTI-FABRICATION & TRUTHFUL REFRAMING MANDATE (CRITICAL)
+When adapting a candidate's projects/experiences to match a target role:
+1. **Preserve the Technical Reality:** You may adapt vocabulary and highlight relevant technical angles (e.g. data modeling, API design, backend performance, testing, automation), but **you must NOT invent fictitious operating environments** (e.g. claiming a financial analytics tool was a "datacenter telemetry alarm engine").
+2. **Reframing vs. Fabrication:**
+   * ✅ **Legitimate Reframe:** Emphasizing backend logic, SQL performance, automated validation, error logging, and API reliability of real projects.
+   * ❌ **Fabrication:** Claiming candidate managed production Linux hosts, resolved datacenter network outages, or configured AWS EC2 auto-scaling when they never did.
+3. **Honest Amazon STAR Structure:**
+   * Situation: State the genuine project or internship context.
+   * Task: Describe the technical problem being solved.
+   * Action: Detail the specific tools, code, and implementation methods used.
+   * Result: Ground outcomes in defensible counts (records, endpoints, modules, test cases) or measured improvements.
 
 ---
 
@@ -318,27 +341,39 @@ The Technical Skills section must contain **ONLY skills that are mentioned in th
 **Three categories of skills to include:**
 1. **JD-Listed Skills** — Skills explicitly named in the JD. Always include.
    * ✅ JD says "SQL" → include SQL
-   * ✅ JD says "Python" → include Python (and pandas/scikit-learn as sub-skills)
+   * ✅ JD says "Python" → include Python
+   * ✅ JD says "Linux/Unix" → include Linux/Unix, Shell/Bash Scripting
+   * ✅ JD says "AWS EC2, S3, RDS" → include AWS (EC2, S3, RDS, DynamoDB)
 2. **JD-Implied Skills** — Skills that are standard prerequisites for the role, even if not listed.
-   * ✅ JD is for "Business Analyst" but only lists SQL/PowerBI → also include: Stakeholder Communication, Documentation, Requirements Gathering, Data-Driven Decision Making, Process Improvement
-   * ✅ JD is for "SWE" but only lists Python/AWS → also include: Git, CI/CD, Code Review, Agile/Scrum
-3. **Role-Standard Professional Skills** — Soft/domain skills that fill out the skills section and demonstrate role awareness. These are NOT in `master_profile.json` because everyone has them, but they should be added to the resume:
-   * Cross-Functional Collaboration, Written & Oral Communication, Data Storytelling, Stakeholder Management
+   * ✅ JD is for "Systems Development Engineer" → include: CI/CD, Git, REST APIs, System Troubleshooting, High Availability, SLA Monitoring
+   * ✅ JD is for "Business Analyst" → include: Stakeholder Communication, Documentation, Requirements Gathering, Process Improvement
+3. **Role-Standard Professional Skills** — Core domain competencies that fill out the skills section and demonstrate role awareness:
+   * Cross-Functional Collaboration, Technical Documentation, UAT Execution, Defect Triage
 
 **Skills to NEVER include:**
-* ❌ Technical skills NOT mentioned or implied by the JD (e.g., C/C++ for a BA role, React for a Data Analyst role)
-* **Why:** Irrelevant skills waste page space, add zero ATS value, and create **interview risk** — the interviewer may ask about listed skills the candidate doesn't need for this role
+* ❌ Technical skills NOT mentioned or implied by the JD (e.g., C/C++ for a Business Analyst role; Power BI, MS Excel, DAX, pandas, scikit-learn, thefuzz for a Core Systems Engineering / SysDE role).
+* **Why:** Irrelevant skills waste page space, dilute ATS keyword density, signal lack of role understanding, and create **interview risk** — an interviewer will question why BI tools or data science packages appear on a systems infrastructure resume.
 
 ### YET-TO-MASTER SKILLS PROTOCOL (Prevents False Skill Claims)
 
-When a user says "add this skill, I'll learn it before the interview":
-1. Add the skill to the resume's Skills section for THIS specific JD.
-2. In `master_profile.json`, add it to `"yet_to_master"` (NOT to the main skills), tagged with the role it was added for and the date.
-3. **On every subsequent JD:** If the AI finds a needed skill in `yet_to_master`, it MUST ask the user:
-   > *"I see [Python] was added to your 'yet to master' list on [date] for [Amazon BA role]. Have you learned it since then?"*
+When a user says "add missing skills", "yes add", or "I'll learn before the interview":
+1. **Never add unlearned skills to `skills_bank.mastered`.**
+2. In `master_profile.json`, add unlearned skills to `"yet_to_master"` using this structured object schema:
+   ```json
+   {
+     "skill": "AWS (EC2, S3, RDS, DynamoDB, CloudWatch)",
+     "category": "cloud_infrastructure_systems",
+     "added_for_role": "amazon_sysde_fba",
+     "added_date": "2026-08",
+     "status": "in_progress"
+   }
+   ```
+3. `build.py` automatically pulls both `mastered[role]` and relevant `yet_to_master` items to compile `main.tex` for this specific role.
+4. **On every subsequent JD:** If a needed skill is found in `yet_to_master`, the AI MUST ask the user:
+   > *"I see [AWS EC2/S3] was added to your 'yet to master' list on [2026-08] for [amazon_sysde_fba]. Have you learned it since then?"*
    > * If user says **yes** → move to `mastered` skills.
-   > * If user says **no** → keep in `yet_to_master`, still add to resume but note it's aspirational.
-4. NEVER silently assume a `yet_to_master` skill has been learned.
+   > * If user says **no** → keep in `yet_to_master` (still included on the tailored resume but flagged as aspirational).
+5. NEVER silently move or duplicate a `yet_to_master` skill into `mastered`.
 
 ---
 
@@ -397,26 +432,28 @@ Before choosing section titles and bullet vocabulary, **consult the Domain Bluep
 
 ### 4. Dynamic 95%–100% Canvas-Fill & Whitespace Compensation Engine:
 When a candidate has less content (e.g., omits 10th/12th High School results, lists only 1 degree, or has only 1–2 projects/jobs), **DO NOT leave awkward empty white space at the bottom of the page!** Dynamically adapt the document density to achieve a beautiful, professional 95%–100% vertical canvas fill on **STRICTLY 1 SINGLE PAGE**:
-1. **Deepen Project & Experience Bullets (Quality Over Quantity):** Prefer **fewer detailed bullets (each 1.5–2 printed lines)** over many short 1-liners. A section with 2–3 well-explained 2-line bullets looks far more professional than 4 cramped 1-line stubs. **Every bullet must be 130–180 characters** so it renders as 1.5–2 full printed lines. No bullet should be under 120 characters.
-2. **Enrich the Professional Summary (3 Full Lines):** The summary MUST be **300–400 characters (60–80 words)** so it renders as **3 full printed lines** with the current 10pt Times font and margins. Industry standard for freshers is 2–4 lines; we target 3 as the sweet spot. The summary should name: target role domain, 3–4 core technical skills from the JD, the candidate's strongest measurable project scope, and a one-phrase career direction. A 1.5-line summary is a failure.
-3. **Anchor with Achievements & Leadership / Coursework:** Include **2–3 solid bullets** under `\section{Achievements & Leadership}`. Each achievement bullet should also be 120–180 characters.
+1. **Deepen Project & Experience Bullets (Solid 2-Liners with Zero Orphan Wraps):** Write **rich, well-explained 2-line bullets (180–235 characters)** that detail system architecture, engineering decisions, and measurable outcomes. Never write short stubs or shallow bullets.
+   * **The Orphan Wrap Physics:** In 10pt Times with our geometry (7.6in width), Line 1 holds ~115–125 characters. A 145–160 char bullet causes Line 1 to take ~120 chars and leaves **only 1–3 orphan words on Line 2 ("anomalies.", "patches.", "milestones.")**. This wastes a full vertical line while looking empty.
+   * **The Rule:** Every project and experience bullet must be **180–235 characters** so that Line 2 is 60–90% full (60–115 characters on Line 2). Bullets in the 130–174 range are FORBIDDEN if they produce orphan wraps.
+2. **Enrich the Professional Summary (3 Full Lines):** The summary MUST be **300–400 characters (60–80 words)** so it renders as **3 full printed lines** with the current 10pt Times font and margins. The summary should name: target role domain, 3–4 core technical skills from the JD, the candidate's strongest measurable project scope, and a one-phrase career direction. A 1.5-line summary is a failure.
+3. **Anchor with Achievements & Leadership / Coursework:** Include **2–3 solid bullets** under `\section{Achievements & Leadership}`. Each achievement bullet should be 130–160 characters (solid 1.5–2 lines).
 4. **Strict 1-Page Invariant:** The final compiled document must **NEVER spill over to a 2nd page under any circumstances!**
-5. **Visual Uniformity Rule:** All bullets within a section should render at roughly the same visual length (all ~1.5–2 lines). Do NOT mix 1-line bullets with 2-line bullets in the same section.
+5. **Visual Uniformity Rule:** All bullets within a section should render at roughly the same visual length (all solid ~2 lines). Do NOT mix 1-line stubs with 2-line bullets in the same section.
 
-### 4b. Content Overflow Prevention Engine (STRICT):
+### 4b. Content Overflow Prevention & Bullet Budget Engine (STRICT):
 
 Before writing any LaTeX, calculate your content budget based on this table. These are **hard limits** — do NOT exceed them:
 
 | Layout Scenario | Summary | Education | Projects | Experience | Skills | Achievements |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 projects + 2 jobs + 3 edu | 300–350 chars | 3 entries | 3 bullets each (130–170 chars/bullet) | 3 + 2 bullets (130–150 chars/bullet) | 4 rows | 3 bullets (120–150 chars) |
-| 2 projects + 2 jobs + 2 edu | 300–400 chars | 2 entries | 3 bullets each (140–180 chars/bullet) | 3 + 2 bullets (130–160 chars/bullet) | 4 rows | 3 bullets (120–160 chars) |
-| 2 projects + 1 job + 2 edu | 320–400 chars | 2 entries | 3–4 bullets each (140–180 chars/bullet) | 3 bullets (140–170 chars/bullet) | 4 rows | 3 bullets (120–160 chars) |
-| 1 project + 2 jobs + 2 edu | 320–400 chars | 2 entries | 4 bullets (140–180 chars/bullet) | 3 + 3 bullets (130–160 chars/bullet) | 4 rows | 3 bullets (120–160 chars) |
+| 2 projects + 2 jobs + 3 edu | 300–350 chars | 3 entries | 2–3 bullets each (180–225 chars/bullet) | 3 + 2 bullets (180–220 chars/bullet) | 4 rows | 3 bullets (130–160 chars) |
+| 2 projects + 2 jobs + 2 edu | 300–400 chars | 2 entries | 3 bullets each (180–235 chars/bullet) | 3 + 2 bullets (180–230 chars/bullet) | 4 rows | 3 bullets (130–165 chars) |
+| 2 projects + 1 job + 2 edu | 320–400 chars | 2 entries | 3–4 bullets each (180–235 chars/bullet) | 3 bullets (180–235 chars/bullet) | 4 rows | 3 bullets (130–165 chars) |
+| 1 project + 2 jobs + 2 edu | 320–400 chars | 2 entries | 4 bullets (180–235 chars/bullet) | 3 + 3 bullets (180–230 chars/bullet) | 4 rows | 3 bullets (130–165 chars) |
 
 **Hard Rules:**
-* If you have 2 projects with 3 education entries, use MAX 3 bullets per project at MAX 170 characters each.
-* **Every bullet must be at least 120 characters.** No short stubs. If a bullet is under 120 chars, add more detail.
+* **Solid 2-line depth:** Target 180–235 characters per project/experience bullet.
+* **Orphan wrap prohibition:** Bullets from 130–174 chars that spill < 50 characters onto Line 2 are strictly prohibited.
 * **Summary must be at least 300 characters (3 full printed lines).** A 200-char summary that renders as 1.5 lines is a failure.
 
 ---

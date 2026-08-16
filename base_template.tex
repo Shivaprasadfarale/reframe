@@ -11,7 +11,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{mathptmx} % Universal native font (zero external package downloads)
+\usepackage{mathptmx} % Universal native Times font
+\usepackage{microtype} % Micro-typographical font expansion to prevent margin wrap glitches
 
 \pagestyle{fancy}
 \fancyhf{} % Clear header and footer
@@ -20,7 +21,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\footskip}{4pt}
 
-% Margins (Optimized for strict 1-page fit)
+% Margins (Calibrated for strict 1-page fit with full vertical fill)
 \addtolength{\oddsidemargin}{-0.55in}
 \addtolength{\evensidemargin}{-0.55in}
 \addtolength{\textwidth}{1.1in}
@@ -35,16 +36,14 @@
 % Standardized Section formatting (Clean non-overlapping headers)
 \titleformat{\section}{
   \vspace{-2pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 % Ensure PDF is machine-readable by ATS
 \pdfgentounicode=1
 
-% Custom reusable commands
+% Clean reusable commands (No rogue \vspace inside text items)
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
+  \item\small{#1}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -57,8 +56,6 @@
 
 % IMPORTANT: \resumeProjectHeading and \resumeSubheading use tabular* internally.
 % Inside these commands, use {\&} (braced ampersand) instead of \& for the & character.
-% Using \& will crash because \\ is interpreted as a tabular row break.
-% Example: \textbf{R{\&}D Analytics} -- NOT \textbf{R\&D Analytics}
 \newcommand{\resumeProjectHeading}[2]{
     \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
@@ -66,7 +63,7 @@
     \end{tabular*}\vspace{-1pt}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=2pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet, itemsep=1.5pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
