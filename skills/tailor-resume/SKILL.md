@@ -42,29 +42,32 @@ Before generating any LaTeX code:
 4. "Strong" threshold: Include Class XII/X only if percentage ≥ 90% (or GPA ≥ 3.7/4.0).
 
 ================================================================================
+================================================================================
 1B. CONTENT OVERFLOW PREVENTION ENGINE (STRICT — HARD LIMITS)
 ================================================================================
 Before writing any LaTeX, calculate your content budget based on this table:
 
-| Layout Scenario               | Summary     | Edu   | Projects                    | Experience                    | Skills | Achievements |
-|-------------------------------|-------------|-------|-----------------------------|-------------------------------|--------|-------------|
-| 2 proj + 2 jobs + 3 edu      | ≤230 chars  | 3     | 3 bullets each (≤170c/ea)  | 3+2 bullets (≤150c/ea)       | 4 rows | 3 bullets   |
-| 2 proj + 2 jobs + 2 edu      | ≤250 chars  | 2     | 3 bullets each (≤180c/ea)  | 3+2 bullets (≤160c/ea)       | 4 rows | 3 bullets   |
-| 2 proj + 1 job + 2 edu       | ≤300 chars  | 2     | 3-4 bullets each (≤180c/ea)| 3 bullets (≤170c/ea)          | 4 rows | 3 bullets   |
-| 1 proj + 2 jobs + 2 edu      | ≤300 chars  | 2     | 4 bullets (≤180c/ea)       | 3+3 bullets (≤160c/ea)       | 4 rows | 3 bullets   |
+| Layout Scenario               | Summary        | Edu   | Projects                    | Experience                    | Skills | Achievements        |
+|-------------------------------|----------------|-------|-----------------------------|-------------------------------|--------|---------------------|
+| 2 proj + 2 jobs + 3 edu      | 300–350 chars  | 3     | 3 bullets each (130–170c/ea)| 3+2 bullets (130–150c/ea)     | 4 rows | 3 bullets (120–150c)|
+| 2 proj + 2 jobs + 2 edu      | 300–400 chars  | 2     | 3 bullets each (140–180c/ea)| 3+2 bullets (130–160c/ea)     | 4 rows | 3 bullets (120–160c)|
+| 2 proj + 1 job + 2 edu       | 320–400 chars  | 2     | 3-4 bullets each (140–180c) | 3 bullets (140–170c/ea)       | 4 rows | 3 bullets (120–160c)|
+| 1 proj + 2 jobs + 2 edu      | 320–400 chars  | 2     | 4 bullets (140–180c/ea)     | 3+3 bullets (130–160c/ea)     | 4 rows | 3 bullets (120–160c)|
 
-HARD RULE: If you have 2 projects with 3 education entries, use MAX 3 bullets per project at MAX 170 characters each. NEVER use 4 bullets in a 2-project + 3-education layout.
-
-Summary character guideline: 200–300 characters (renders as 2–3 printed lines with current margins and font).
+HARD RULES:
+- If you have 2 projects with 3 education entries, use MAX 3 bullets per project at MAX 170 characters each. NEVER use 4 bullets in a 2-project + 3-education layout.
+- Every bullet must be at least 120 characters (prefer 130–180 chars, 1.5–2 printed lines). No short stubs.
+- Summary must be at least 300 characters (300–400 chars, 60–80 words, rendering as 3 full printed lines). A 1.5-line summary is a failure.
 
 ================================================================================
 1C. DYNAMIC CANVAS-FILL & WHITESPACE COMPENSATION ENGINE
 ================================================================================
-When a candidate has less content, DO NOT leave blank space at the bottom! Dynamically expand:
-1. Deepen Project & Experience Bullets to 3–4 comprehensive bullets.
-2. Enrich Professional Summary to 200–300 characters mapped to the target JD.
-3. Anchor with Achievements / Coursework: 2–3 bullets.
-4. STRICT INVARIANT: The final output must NEVER cross 1 page!
+When a candidate has less content, DO NOT leave blank space at the bottom! Dynamically adapt:
+1. **Deepen Project & Experience Bullets (Quality Over Quantity):** Prefer fewer detailed bullets (1.5–2 printed lines each, 130–180 chars) over many short 1-liners.
+2. **Enrich Professional Summary:** Expand summary to 300–400 characters (60–80 words, 3 full printed lines) naming target domain, 3–4 core technical skills, and strongest measurable scope.
+3. **Anchor with Achievements / Coursework:** 2–3 solid bullets (120–180 chars each).
+4. **Visual Uniformity Rule:** All bullets within a section must render at roughly the same visual length (all ~1.5–2 lines). Do NOT mix 1-line and 2-line bullets.
+5. **STRICT INVARIANT:** The final output must NEVER cross 1 page!
 
 ================================================================================
 2. ANTI-AI TONE MANDATE (CRITICAL — RECRUITER DETECTION)
@@ -116,7 +119,7 @@ FORBIDDEN:
 - If you cannot explain HOW a percentage was measured, use a scope metric instead.
 
 ================================================================================
-4. KEYWORD OPTIMIZATION (NOT Keyword Stuffing)
+4. KEYWORD OPTIMIZATION & SKILLS RELEVANCE FILTER
 ================================================================================
 Per RESUME_RESEARCH_REPORT.md §4.3: "Repeating a keyword 10 times does NOT compound its weight. Modern matching engines register a skill entity exactly once."
 
@@ -125,6 +128,19 @@ Per RESUME_RESEARCH_REPORT.md §4.3: "Repeating a keyword 10 times does NOT comp
 3. Secondary placement: ONE relevant project/experience bullet.
 4. NEVER repeat the same keyword in 3+ separate bullets.
 5. Use natural synonyms (e.g., "SQL" in skills, "queried using SQL CTEs" in a bullet).
+
+### SKILLS RELEVANCE FILTER (No Irrelevant Skills):
+Include ONLY skills mentioned in or directly implied by the JD:
+1. **JD-Listed Skills:** Explicitly named in the JD (SQL, Python, Power BI).
+2. **JD-Implied Skills:** Standard prerequisites (e.g. Business Analyst → Requirements Gathering, Documentation, Process Improvement, Defect Triage).
+3. **Role-Standard Professional Skills:** Soft/domain skills demonstrating role awareness (Cross-Functional Collaboration, Written & Oral Communication, Data Storytelling).
+4. **STRICT BAN on Irrelevant Skills:** Never include unrelated tech skills (e.g., C/C++ or React for a Business Analyst role). Avoids noise and eliminates interview risk.
+
+### YET-TO-MASTER SKILLS PROTOCOL:
+When candidate says "add this skill, I'll learn it":
+1. Add skill to resume for this JD.
+2. Store in `master_profile.json` under `"yet_to_master"` with date and target role.
+3. On future JDs, if a skill is in `yet_to_master`, AI MUST ask if candidate has learned it before using it as a mastered skill. Never silently assume mastery.
 
 ================================================================================
 5. COMPANY-SPECIFIC BULLET FRAMEWORKS

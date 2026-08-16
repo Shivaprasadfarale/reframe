@@ -87,10 +87,15 @@
     }
   ],
   "skills_bank": {
-    "languages": "Python, SQL, JavaScript, TypeScript, HTML5, CSS3, C++",
-    "frameworks_libraries": "React, Node.js, pandas, scikit-learn, Express, Bootstrap",
-    "tools_platforms": "Git, GitHub, PostgreSQL, Power BI, MS Excel (Power Query, VLOOKUP, Pivot Tables), VS Code, Postman",
-    "core_competencies": "Data Analysis & Querying, Requirements Traceability (RTM), Functional Testing, RESTful APIs, Agile/Scrum Collaboration"
+    "mastered": {
+      "default": {
+        "languages": "Python, SQL, JavaScript, TypeScript, HTML5, CSS3",
+        "frameworks_libraries": "React, Node.js, pandas, scikit-learn, Express, Bootstrap",
+        "tools_platforms": "Git, GitHub, PostgreSQL, Power BI, MS Excel (Power Query, VLOOKUP, Pivot Tables), VS Code, Postman",
+        "core_competencies": "Data Analysis & Querying, Requirements Traceability (RTM), Functional Testing, RESTful APIs, Agile/Scrum Collaboration"
+      }
+    },
+    "yet_to_master": []
   },
   "achievements": [
     "Winner -- University Hackathon (2025): Awarded 1st place among 40+ teams for building an AI-powered assistive productivity tool.",

@@ -14,11 +14,15 @@ When a user provides a Job Description (JD):
 2. Output a structured, **honest** Diagnostic Report. Do NOT inflate assessments to please the user:
 
    - 🎯 **Role Alignment Assessment** (Honest qualitative tier — NOT a fake percentage):
-     * 🟢 **Strong Fit** — Core JD requirements (60%+) are directly evidenced in profile.
-     * 🟡 **Moderate Fit** — Transferable skills match, but 2–3 critical JD requirements are missing.
-     * 🟠 **Stretch Fit** — Foundational skills present but significant domain/experience gaps.
-     * 🔴 **Weak Fit** — Profile fundamentally misaligned; applying is likely a waste of time.
-     * Be **brutally honest**. Do NOT inflate the tier.
+     * 🟢 **Strong Fit** — Core JD requirements (60%+) directly evidenced AND 60%+ of preferred qualifications fully MET (not partially).
+     * 🟡 **Moderate Fit** — Basic quals pass, but 50%+ of preferred quals are PARTIALLY MET or NOT MET.
+     * 🟠 **Stretch Fit** — Basic quals pass, but most preferred quals NOT MET. OR: significant experience gap (e.g., 0 YoE for a 2+ year role).
+     * 🔴 **Weak Fit** — One or more basic qualifications FAIL.
+     * **HARD TIER RULES (Cannot Override):**
+       - If 50%+ of preferred quals are NOT MET or PARTIALLY MET → CANNOT be higher than 🟡 Moderate Fit.
+       - If JD requires X+ years experience and candidate has less than half of X → CANNOT be higher than 🟠 Stretch Fit.
+       - If any basic qualification FAILS → CANNOT be higher than 🔴 Weak Fit.
+     * Be **brutally honest**. Do NOT inflate to please the user.
 
    - 📍 **Location Alignment Check:**
      *"Job Location: [JD Location / Remote] | Your Stored Location: [Candidate City]"*
@@ -44,6 +48,8 @@ When a user provides a Job Description (JD):
      * 🆕 **New Project Recommended:** If existing projects don't cover a critical JD requirement
 
    - 💡 **Actionable Skill Recommendations:** Suggest 1–2 mini-projects or skills to bridge gaps.
+     * **Yet-To-Master Check:** Check candidate's `skills_bank.yet_to_master`. If any skill required by this JD is listed in `yet_to_master`, explicitly ask:
+       *"I see [Skill] was added to your 'yet to master' list on [date] for [earlier role]. Have you learned it since then? If yes, I will add it to mastered skills."*
 
    - 🔍 **Hard Truth Assessment** (Do NOT sugarcoat):
      * ✅ *"Reframing CAN: [what it fixes]"*
@@ -56,6 +62,6 @@ When a user provides a Job Description (JD):
 4. End with the consultation question:
    *"Would you like me to adapt your existing projects and generate your Overleaf-ready LaTeX code now? Also, please let me know if you want me to set the header location to [JD Location] (for local ATS matching) or keep your primary location [Candidate City]?"*
 
-5. When user confirms "Add Missing Skills" → add to Skills section only; do NOT add fabricated experience bullets.
+5. When user confirms "Add Missing Skills" → add to Skills section only; record in `skills_bank.yet_to_master` with role and timestamp; do NOT add fabricated experience bullets.
 
 6. DO NOT output LaTeX code in this skill.

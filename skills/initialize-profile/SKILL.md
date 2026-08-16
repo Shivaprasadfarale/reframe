@@ -25,4 +25,7 @@ DIRECTIVES:
      **Preset key naming convention:**
      - Role-specific: `<company>_<role_slug>` (e.g., `amazon_ba_insc`, `google_swe_intern`)
      - Generic reusable: `<domain>_<function>` (e.g., `data_analytics`, `fullstack_swe`)
-  4. Store the confirmed master profile in `master_profile.json` and invite the user to paste their first Job Description for tailoring!
+  4. Structure `skills_bank` into two tiers:
+     - `"mastered"`: Domain/role presets of verified candidate skills.
+     - `"yet_to_master"`: Empty list `[]` initially for tracking aspirational skills added per JD.
+  5. Store the confirmed master profile in `master_profile.json` and invite the user to paste their first Job Description for tailoring!
