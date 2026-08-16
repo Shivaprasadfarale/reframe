@@ -55,6 +55,10 @@
     \end{tabular*}\vspace{-1pt}
 }
 
+% IMPORTANT: \resumeProjectHeading and \resumeSubheading use tabular* internally.
+% Inside these commands, use {\&} (braced ampersand) instead of \& for the & character.
+% Using \& will crash because \\ is interpreted as a tabular row break.
+% Example: \textbf{R{\&}D Analytics} -- NOT \textbf{R\&D Analytics}
 \newcommand{\resumeProjectHeading}[2]{
     \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}

@@ -1,6 +1,6 @@
 ---
 name: initialize-profile
-description: Parses candidate raw resume text or uploaded resume document into structured master profile categories and runs the interactive missing-link interview.
+description: Parses candidate raw resume text or uploaded resume document into structured master profile categories, runs the interactive missing-link interview, and saves with proper framing preset naming conventions.
 ---
 
 # Skill: Profile Initialization & Onboarding
@@ -21,4 +21,8 @@ DIRECTIVES:
      3. Location / Preferred Cities
      4. Class 12th / High School Percentage (For Early Career)
      Would you like to provide any of these now, or shall I save your profile without them?"
-  3. Store the confirmed master profile in session memory and invite the user to paste their first Job Description for tailoring!
+  3. Create multiple role-framing presets per job/project entry.
+     **Preset key naming convention:**
+     - Role-specific: `<company>_<role_slug>` (e.g., `amazon_ba_insc`, `google_swe_intern`)
+     - Generic reusable: `<domain>_<function>` (e.g., `data_analytics`, `fullstack_swe`)
+  4. Store the confirmed master profile in `master_profile.json` and invite the user to paste their first Job Description for tailoring!
